@@ -3,6 +3,7 @@
 import { ChevronDown } from "lucide-react"
 import { useState } from "react"
 
+import AppleIcon from "./images/applIcon.png"
 import applogo from "./images/applogo.png"
 import applogowithtext from "./images/applogowithtext.png"
 import birr from "./images/birr.png"
@@ -11,7 +12,7 @@ import cashbackoffer from "./images/cashbackoffer.svg"
 import collectIcon from "./images/collecticon.svg"
 import comletinnerIcon from "./images/comletinnerIcon.svg"
 import completoffer from "./images/completoffer.svg"
-import googleplay from "./images/googleplay.png"
+import googleplayIcon from "./images/googleplayIcon.png"
 import gradientColor from "./images/gradientColor.png"
 import pro1 from "./images/productlist/pro1.png"
 import pro2 from "./images/productlist/pro2.png"
@@ -21,19 +22,18 @@ import sup1 from "./images/supermarketlist/sup1.svg"
 import sup2 from "./images/supermarketlist/sup2.svg"
 import sup3 from "./images/supermarketlist/sup3.svg"
 import sup4 from "./images/supermarketlist/sup4.svg"
-import Apple from "./images/svg/apple.png"
 import carticon from "./images/svg/cartIcon.svg"
 import flashIcon from "./images/svg/flashIcon.svg"
 import instagramIcon from "./images/svg/instagram.svg"
 import telegramIcon from "./images/svg/telegram.svg"
 import tiktokIcon from "./images/svg/tiktok.svg"
 
-function FAQAccordion() { 
+function FAQAccordion() {
   const [openId, setOpenId] = useState<number | null>(null)
 
   const faqs = [
     "What is shewaber rewards?",
-    "How to claim offers?", 
+    "How to claim offers?",
     "How to use offers?",
     "What is shewaber rewards?",
     "What is shewaber rewards?",
@@ -91,9 +91,12 @@ export default function App() {
     className="font-extrabold leading-tight mb-4"
     style={{
       fontFamily: "'Rammetto One', cursive",
-      fontWeight:900,
-      fontSize: "35px",
-      lineHeight: 1.05,
+      fontWeight: 400,
+      fontStyle: "normal",
+      fontSize: "30px",
+      lineHeight: "35px",
+      letterSpacing: "0%",
+      verticalAlign: "middle",
       whiteSpace: "pre-wrap",
     }}
   >
@@ -104,33 +107,38 @@ export default function App() {
   <p
     className="mb-8"
     style={{
-      fontFamily: "'Poppins', sans-serif",
-      fontWeight: 700,
+      fontWeight: 400,
       fontStyle: "normal",
       fontSize: "15px",
     }}
   >
-    Cashback from every <span style={{ fontWeight: 800 }}>Receipts Uploaded!</span>
+    Cashback from every <span style={{ fontWeight: 700 }}>Receipts Uploaded!</span>
   </p>
 
   {/* Store Buttons — Image Only */}
   <div className="flex flex-row gap-3 mb-6 w-full flex-nowrap">
-    
-    <a className="flex-1 min-w-0">
-      <img
-        src={googleplay}
-        alt="Google Play Button"
-        className="w-full h-auto object-contain"
-      />
-    </a>
 
-    <a className="flex-1 min-w-0">
-      <img
-        src={Apple}
+    <div className="flex-1 min-w-0">
+      <button className="w-full bg-white border border-gray-300 rounded-lg p-[10px] flex items-center justify-center hover:bg-gray-50 transition-colors">
+         <img
+        src={googleplayIcon}
         alt="Apple Store Button"
-        className="w-full h-auto object-contain"
+        className="h-[25px] w-[25px]"
       />
-    </a>
+<span className="text-[12px] font-[650] text-black pl-2">Coming Soon ...</span>
+      </button>
+    </div>
+
+      <div className="flex-1 min-w-0">
+      <button className="w-full bg-white border border-gray-300 rounded-lg p-[10px] flex items-center justify-center hover:bg-gray-50 transition-colors">
+         <img
+        src={AppleIcon}
+        alt="Apple Store Button"
+        className="h-[25px] w-[25px]"
+      />
+<span className="text-[12px] font-[650] text-black pl-2">Coming Soon ...</span>
+      </button>
+    </div>
 
   </div>
 </div>
@@ -140,11 +148,11 @@ export default function App() {
 
 {/* "How it works" card */}
 <div
-className="relative z-20 w-full rounded-[35px] shadow-md p-3 -mt-[37px]"
+className="relative z-20 w-full rounded-[35px] shadow-md px-[15px] py-[20px] -mt-[37px]"
 style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 >
 <div
- className="p-4"
+ className="px-[20px] py-[30px]"
  style={{
    background: '#FFF6EB',
    borderRadius: '25px', // Inner border radius
@@ -153,18 +161,14 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 >
  <span className="block mb-2 text-black font-bold text-sm">How it Works?</span>
 <h3
-  className="leading-tight"
+  className="leading-tight font-extrabold text-[50px]"
   style={{
-    // fontFamily: 'Poppins, sans-serif',
-    fontWeight: 900, // extra bold
-    fontStyle: 'normal',
-    fontSize: '50px',
-    lineHeight: '52px',
-    letterSpacing: '0.5px', // slightly wider for impact
+  
     background: 'linear-gradient(90deg, #FF6600 0%, #FF0000 100%)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     textAlign: 'left',
+    lineHeight: '50px',
     verticalAlign: 'middle',
   }}
 >
@@ -181,22 +185,22 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
   <div className="flex flex-col gap-6 mb-8">
     {[
       {
-        icon: <img src={scanIcon} className="h-5 w-5" alt="Scan" />,
+        icon: <img src={scanIcon} className="h-[30px] w-[30px]" alt="Scan" />,
         title: "Scan your receipt",
         sub: "From Our Partner Supermarkets",
       },
       {
-        icon: <img src={collectIcon} className="h-5 w-5" alt="Collect" />,
+        icon: <img src={collectIcon} className="h-[30px] w-[30px]" alt="Collect" />,
         title: "Collect Cashback",
         sub: "Uploaded Receipts earns you Cashback & Saves you Money",
       },
       {
-        icon: <div className="relative"><img src={completoffer} className="h-5 w-5" alt="Complete" /><img src={comletinnerIcon} className="absolute inset-0 h-3 w-3 m-auto" alt="Inner" /></div>,
+        icon: <div className="relative"><img src={completoffer} className="h-[30px] w-[30px]" alt="Complete" /><img src={comletinnerIcon} className="absolute inset-0 h-3 w-3 m-auto" alt="Inner" /></div>,
         title: "Complete Offers",
         sub: "Shop from Bonus Offers & Earn extra Cashback rewards",
       },
       {
-        icon: <img src={cashbackoffer} className="h-5 w-5" alt="Cashback" />,
+        icon: <img src={cashbackoffer} className="h-[30px] w-[30px]" alt="Cashback" />,
         title: "Cashback to Discounts",
         sub: "Convert Cashback into Supermarket Discount Coupons",
       },
@@ -233,11 +237,10 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
     </a>
          Supermarkets
         </h2>
-        <div className="overflow-x-auto scrollbar-hide mb-12">
-          <div className="flex flex-col gap-4 min-w-max">
-            {/* First row */}
-            <div className="flex gap-3">
-              {[sup1, sup2, sup3, sup4].map((sup, i) => (
+        <div className="overflow-hidden -mx-6 md:-mx-12 lg:-mx-16">
+          <div className="flex flex-col gap-4">
+            <div className="flex gap-3 scrolling">
+              {[sup1, sup2, sup3, sup4, sup1, sup2, sup3, sup4].map((sup, i) => (
                 <div key={i} className="flex items-center justify-center flex-shrink-0">
                   <img
                     src={sup || "/placeholder.svg"}
@@ -247,21 +250,20 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
                 </div>
               ))}
             </div>
-            {/* Second row */}
-            <div className="flex gap-3">
-              {[sup1, sup2, sup3, sup4].map((sup, i) => (
+            <div className="flex gap-3 scrolling">
+              {[sup1, sup2, sup3, sup4, sup1, sup2, sup3, sup4].map((sup, i) => (
                 <div key={i} className="flex items-center justify-center flex-shrink-0">
                   <img
                     src={sup || "/placeholder.svg"}
                     className="rounded-full border border-gray-100 bg-white p-2 h-[75px] w-[75px] object-contain"
                     alt="Supermarket"
-                  /> 
+                  />
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </section> 
+      </section>
 
       {/* Offers */}
  <section className="mx-auto max-w-full px-6 md:px-12 lg:px-16 mt-8 md:mt-12 mb-12">
@@ -373,7 +375,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 
       {/* Footer CTA */}
       <div
-  className="w-full relative rounded-t-3xl pt-16 pb-8 px-6 text-white text-center mt-[80px]"
+  className="w-full relative rounded-t-3xl pt-16 pb-8 px-[50px] text-white text-center mt-[80px]"
   style={{
     backgroundImage: `url(${gradientColor})`,
     backgroundSize: "cover",
@@ -402,28 +404,34 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 
   {/* Buttons row */}
   <div className="flex flex-row gap-3 mb-6 w-full flex-nowrap">
-    
-    <a className="flex-1 min-w-0">
-      <img
-        src={googleplay}
-        alt="Google Play Button"
-        className="w-full h-auto object-contain"
-      />
-    </a>
 
-    <a className="flex-1 min-w-0">
-      <img
-        src={Apple}
+    <div className="flex-1 min-w-0">
+      <button className="w-full bg-white border border-gray-300 rounded-lg p-[10px] flex items-center justify-center hover:bg-gray-50 transition-colors">
+         <img
+        src={googleplayIcon}
         alt="Apple Store Button"
-        className="w-full h-auto object-contain"
+        className="h-[20px] w-[20px]"
       />
-    </a>
+<span className="text-[11px] font-[650] text-black pl-2">Coming Soon ...</span>
+      </button>
+    </div>
+
+      <div className="flex-1 min-w-0">
+      <button className="w-full bg-white border border-gray-300 rounded-lg p-[10px] flex items-center justify-center hover:bg-gray-50 transition-colors">
+         <img
+        src={AppleIcon}
+        alt="Apple Store Button"
+        className="h-[20px] w-[20px]"
+      />
+<span className="text-[11px] font-[650] text-black pl-2">Coming Soon ...</span>
+      </button>
+    </div>
 
   </div>
 
 
   {/* Social icons row */}
-  <div className="w-full flex justify-between px-[64px]">
+  <div className="w-full flex justify-between pt-[15px]">
     <a href="#" className="hover:opacity-80 transition-opacity">
       <img src={instagramIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="Instagram" />
     </a>
@@ -439,6 +447,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
     </div>
   )
 }
+
 
 
 
