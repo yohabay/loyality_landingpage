@@ -45,7 +45,7 @@ function FAQAccordion() {
         <button
           key={i}
           onClick={() => setOpenId(openId === i ? null : i)}
-          className="rounded-full mt-[15px] px-[20px] py-[17px] text-[15px] font-medium text-gray-700 flex items-center justify-between hover:bg-gray-200 transition-colors text-left"
+          className="rounded-full mt-[15px] px-[20px] py-[17px] text-[15px] font-[500] text-[#363636] flex items-center justify-between hover:bg-gray-200 transition-colors text-left"
           style={{ background: '#D4D4D440', border: '0.5px solid #D4D4D4' }}
         >
           <span>{q}</span>
@@ -267,7 +267,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 
       {/* Offers */}
  <section className="mx-auto max-w-full px-6 md:px-12 lg:px-16 mt-8 md:mt-12 mb-12">
-  <h2 className="text-xl md:text-2xl font-black mb-6 text-gray-900 flex items-center gap-2">
+  <h2 className="text-[20px] font-black mb-6 text-black flex items-center gap-2">
     <img src={flashIcon} className="h-6 w-6" alt="Flash" />
     Popular Offers
   </h2>
@@ -310,7 +310,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
       <div key={i} className="relative rounded-2xl bg-white shadow-md p-4 md:p-5 border border-gray-100">
         {/* Days left badge */}
         <div className="absolute top-0 right-0 flex items-center justify-center" style={{ width: '60px', height: '20px', borderTopRightRadius: '20px', borderBottomLeftRadius: '10px', background: 'linear-gradient(180deg, #FF6600 0%, #FF0000 100%)', opacity: 1, transform: 'rotate(0deg)' }}>
-          <span className="text-white font-bold" style={{ fontSize: '7px' }}>{o.left}</span>
+          <span className="text-white font-bold" style={{ fontSize: '7px',fontWeight: "bold"}}>{o.left}</span>
         </div>
 
         <div className="flex flex-col gap-6">
@@ -320,7 +320,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
             <div className="flex-shrink-0">
               <img
                 src={o.img || "/placeholder.svg"}
-                className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover"
+                className="w-[85px] h-[85px] rounded-xl object-cover"
                 alt="product"
               />
             </div>
@@ -332,18 +332,21 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
                 {o.badge}
               </div>
               {/* Title */}
-              <div className="font-bold text-[12px] text-gray-900">{o.title}</div>
+              <div className="font-bold text-[12px] text-black">{o.title}</div>
               {/* Store with icon */}
-              <div className="flex items-center gap-1 text-gray-600">
-                    <div className="text-[10px] text-gray-500 mt-1">0% completed</div>
-                <img src={o.icon || "/placeholder.svg"} className="w-4 h-4 rounded-full" alt="Store icon" />
+              <div className="flex items-center gap-1 text-black">
+                    <div className="text-[10px] text-black mt-1">
+                      <span style={{fontWeight:700 , paddingRight:3}}>0%</span>
+                      <span>completed</span>
+                    </div>
+                <img src={o.icon || "/placeholder.svg"} className="w-[15px] h-[15px] rounded-full" alt="Store icon" />
                 <span className="text-[10px]">{o.store}</span>
               </div>
             </div>
           </div>
 
           {/* Bottom row: Progress bar and Reward spanning full width */}
-          <div className="flex items-center justify-between pl-[15px]">
+          <div className="flex items-center justify-between pl-[15px]"> 
             <div className="flex-1 mr-4">
               <div className="flex gap-1">
                 {[...Array(o.total)].map((_, idx) => (
@@ -356,7 +359,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
               <span className="font-bold text-[10px]">Get</span>
               <span className="font-[900] text-[15px] text-[#613700]"> {o.reward}</span>
               <div className="">
-                <img src={birr || "/placeholder.svg"} className="h-4" alt="Birr" />
+                <img src={birr || "/placeholder.svg"} className="h-[17px]" alt="Birr" />
               </div>
             </div>
           </div>
@@ -369,7 +372,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 
       {/* FAQ */}
       <section className="mx-auto max-w-full px-6 md:px-12 lg:px-16 mt-8 md:mt-12 mb-12">
-        <h2 className="text-xl md:text-2xl font-black mb-6 text-gray-900">Asked Questions</h2>
+        <h2 className="text-[30px] font-black mb-6 text-black">Asked Questions</h2>
         <FAQAccordion />
       </section>
 
