@@ -483,7 +483,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 
 
   {/* Social icons row */}
-  <div className="w-full flex justify-between pt-[15px]">
+  <div className="w-full flex justify-between pt-[15px] px-[14px]">
     <a href="#" className="hover:opacity-80 transition-opacity">
       <img src={instagramIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="Instagram" />
     </a>
