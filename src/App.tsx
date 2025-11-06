@@ -32,25 +32,74 @@ function FAQAccordion() {
   const [openId, setOpenId] = useState<number | null>(null)
 
   const faqs = [
-    "What is shewaber rewards?",
-    "How to claim offers?",
-    "How to use offers?",
-    "What is shewaber rewards?",
-    "What is shewaber rewards?",
+    {
+      question: "What is Gursha Rewards?",
+      answer: "Gursha Rewards is a supermarket loyalty app that lets shoppers earn Gursha points, Maximize savings with exclusive offers, and save on every spend at our partner supermarkets."
+    },
+    {
+      question: "How do I earn Gursha points?",
+      answer: "You earn gursha points by shopping at partner supermarkets and uploading your receipt in the app, (1 Gursha points = 1 ETB)."
+    },
+    {
+      question: "How does Gursha Rewards works?",
+      answer: "Simply upload your purchase receipt to the app from one of our partner supermarkets and see your saving grow through Gursha points."
+    }, 
+    {
+      question: "What is an Offer?",
+      answer: "Offers are bonus campaigns that help you earn more Gursha points through game-like progress, either by buying specific items or spending a set amount within the campaign period."
+    },
+    {
+      question: "What to do with my Gursha points?",
+      answer: "Gursha points collected from a supermarket can be converted into a discount coupon, which will be deducted for your next purchase by giving the cashier your coupon code and pay only the remaining amounts."
+    },
+    {
+      question: "How long do my Gursha points stay valid?",
+      answer: "Gursha points have an expiry period set by the supermarket (usually 6–12 months). You can track expiration inside the app."
+    },
+    {
+      question: "Can I earn Gursha points for past purchases?",
+      answer: "Gursha points are only awarded for purchases made after you join and submit a valid receipt that were issued within 24 hours of purchase."
+    },
+    {
+      question: "Do all supermarkets offer the same rewards?",
+      answer: "No. Each supermarket runs its own promotions, rewards, and bonus campaigns but all work through Gursha Rewards."
+    },
+    {
+      question: "Can I transfer or share my Gursha points?",
+      answer: "Currently, Gursha points are linked to your account and cannot be transferred. Point gifting may be introduced later."
+    },
+    {
+      question: "How do supermarkets benefit?",
+      answer: "Supermarkets use Gursha Rewards to increase customer loyalty, boost repeat purchases, and understand shopper behavior for better offers."
+    },
+    {
+      question: "Does Gursha Rewards collect my personal spending data?",
+      answer: "Yes, but only to personalize offers and reward calculations. We do not share or sell your personal data your privacy is protected."
+    },
+    {
+      question: "What if my receipt is rejected?",
+      answer: "If a receipt is unclear, expired, or from a non-partner store, it may be rejected. But for the unclear ones you can always resubmit within 24 hours with a clearer photo."
+    }
   ]
 
   return (
     <div className="flex flex-col gap-2">
-      {faqs.map((q, i) => (
-        <button
-          key={i}
-          onClick={() => setOpenId(openId === i ? null : i)}
-          className="rounded-full mt-[15px] px-[20px] py-[17px] text-[15px] font-[500] text-[#363636] flex items-center justify-between hover:bg-gray-200 transition-colors text-left"
-          style={{ background: '#D4D4D440', border: '0.5px solid #D4D4D4' }}
-        >
-          <span>{q}</span>
-          <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${openId === i ? "rotate-180" : ""}`} />
-        </button>
+      {faqs.map((faq, i) => (
+        <div key={i}>
+          <button
+            onClick={() => setOpenId(openId === i ? null : i)}
+            className="w-full rounded-full mt-[15px] px-[20px] py-[17px] text-[15px] font-[500] text-[#363636] flex items-center justify-between hover:bg-gray-200 transition-colors text-left"
+            style={{ background: '#D4D4D440', border: '0.5px solid #D4D4D4' }}
+          >
+            <span>{faq.question}</span>
+            <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${openId === i ? "rotate-180" : ""}`} />
+          </button>
+          {openId === i && (
+            <div className="mt-2 px-[20px] py-[15px] rounded-lg text-[14px] text-gray-700 bg-white border" style={{ border: '0.5px solid #D4D4D4' }}>
+              {faq.answer}
+            </div>
+          )}
+        </div>
       ))}
     </div>
   )
