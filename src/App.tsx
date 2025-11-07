@@ -477,13 +477,13 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 
     }}
   />
+  {/* Logo on top overlapping */}
+  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-20">
+    <img src={applogo || "/placeholder.svg"} className="h-16 w-16 md:h-20 md:w-20" alt="App Logo" />
+  </div>
+
   {/* Content wrapper */}
   <div className="relative z-10">
-    {/* Logo on top overlapping */}
-    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
-      <img src={applogo || "/placeholder.svg"} className="h-16 w-16 md:h-20 md:w-20" alt="App Logo" />
-    </div>
-
     {/* Heading */}
     <h2 className="text-[20px] font-semibold mb-6">
       Download the app to save on every purchase!
