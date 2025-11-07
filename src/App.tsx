@@ -15,13 +15,14 @@ import googleplayIcon from "./images/googleplayIcon.png"
 import gradientColor from "./images/gradientColor.png"
 // import pro1 from "./images/productlist/pro1.png"
 // import pro2 from "./images/productlist/pro2.png"
-// import pro3 from "./images/productlist/pro3.png"
+// import pro3 from "./images/productlist/pro3.png" 
 import scanIcon from "./images/scanIcon.svg"
 // import sup1 from "./images/supermarketlist/sup1.svg"
 // import sup2 from "./images/supermarketlist/sup2.svg" 
 // import flashIcon from "./images/svg/flashIcon.svg"
 import instagramIcon from "./images/svg/instagram.svg"
-import telegramIcon from "./images/svg/telegram.svg"
+import linkedinIcon from "./images/svg/linkdin.png"
+// import linkedinIcon from "./images/svg/icons8-linkedin-24.png"
 import tiktokIcon from "./images/svg/tiktok.svg"
 
 function FAQAccordion() {
@@ -171,10 +172,10 @@ export default function App() {
       <button className="w-full bg-white border border-gray-300 rounded-lg p-[10px] flex items-center justify-center hover:bg-gray-50 transition-colors">
          <img
         src={googleplayIcon}
-        alt="Apple Store Button"
-        className="h-[25px] w-[25px]"
+        alt="Google Play Button"
+        className="h-[20px] w-[20px]"
       />
-<span className="text-[12px] font-[650] text-black pl-2">Coming Soon ...</span>
+<span className="text-[11px] font-[650] text-black pl-2">Coming Soon ...</span>
       </button>
     </div>
 
@@ -183,9 +184,9 @@ export default function App() {
          <img
         src={AppleIcon}
         alt="Apple Store Button"
-        className="h-[25px] w-[25px]"
+        className="h-[20px] w-[20px]"
       />
-<span className="text-[12px] font-[650] text-black pl-2">Coming Soon ...</span>
+<span className="text-[11px] font-[650] text-black pl-2">Coming Soon ...</span>
       </button>
     </div>
 
@@ -246,7 +247,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
       {
         icon: <div className="relative"><img src={completoffer} className="h-[30px] w-[30px]" alt="Complete" /><img src={comletinnerIcon} className="absolute inset-0 h-3 w-3 m-auto" alt="Inner" /></div>,
         title: "Complete Offers",
-        sub: "Shop from Bonus Offers & Earn extra Cashback rewards",
+        sub: "Shop from Bonus Offers & Earn extra Gursha points",
       },
       {
         icon: <img src={cashbackoffer} className="h-[35px] w-[35px]" alt="Cashback" />,
@@ -270,7 +271,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
         </div>
       </div>
     ))}
-  </div>
+  </div> 
 </section>
 
 
@@ -473,58 +474,62 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
       backgroundImage: `url(${bottomBgimage})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
-  
+
     }}
   />
-  {/* Logo on top overlapping */}
-  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
-    <img src={applogo || "/placeholder.svg"} className="h-16 w-16 md:h-20 md:w-20" alt="App Logo" />
-  </div>
-
-  {/* Heading */}
-  <h2 className="text-lg md:text-xl font-semibold mb-6">
-    Download the app to save on every purchase!
-  </h2>
-
-  {/* Buttons row */}
-  <div className="flex flex-row gap-3 mb-6 w-full flex-nowrap">
-
-    <div className="flex-1 min-w-0">
-      <button className="w-full bg-white border border-gray-300 rounded-lg p-[10px] flex items-center justify-center hover:bg-gray-50 transition-colors">
-         <img
-        src={googleplayIcon}
-        alt="Apple Store Button"
-        className="h-[20px] w-[20px]"
-      />
-<span className="text-[11px] font-[650] text-black pl-2">Coming Soon ...</span>
-      </button>
+  {/* Content wrapper */}
+  <div className="relative z-10">
+    {/* Logo on top overlapping */}
+    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
+      <img src={applogo || "/placeholder.svg"} className="h-16 w-16 md:h-20 md:w-20" alt="App Logo" />
     </div>
 
-      <div className="flex-1 min-w-0">
-      <button className="w-full bg-white border border-gray-300 rounded-lg p-[10px] flex items-center justify-center hover:bg-gray-50 transition-colors">
-         <img
-        src={AppleIcon}
-        alt="Apple Store Button"
-        className="h-[20px] w-[20px]"
-      />
-<span className="text-[11px] font-[650] text-black pl-2">Coming Soon ...</span>
-      </button>
+    {/* Heading */}
+    <h2 className="text-[20px] font-semibold mb-6">
+      Download the app to save on every purchase!
+    </h2>
+
+    {/* Buttons row */}
+   <div className="flex flex-row gap-3 mb-6 w-full flex-nowrap">
+
+   <div className="flex-1 min-w-0">
+     <button className="w-full bg-white border border-gray-300 rounded-lg p-2 flex items-center justify-center hover:bg-gray-50 transition-colors shadow-sm">
+       <img
+         src={googleplayIcon}
+         alt="Google Play Button"
+         className="h-5 w-5"
+       />
+       <span className="text-xs font-semibold text-black pl-2">Coming Soon ...</span>
+     </button>
+   </div>
+
+   <div className="flex-1 min-w-0">
+     <button className="w-full bg-white border border-gray-300 rounded-lg p-2 flex items-center justify-center hover:bg-gray-50 transition-colors shadow-sm">
+       <img
+         src={AppleIcon}
+         alt="Apple Store Button"
+         className="h-5 w-5"
+       />
+       <span className="text-xs font-semibold text-black pl-2">Coming Soon ...</span>
+     </button>
+   </div>
+
+ </div>
+
+
+
+    {/* Social icons row */}
+    <div className="w-full flex justify-between pt-[15px] px-[14px]">
+      <a href="https://www.linkedin.com/company/shewaber-reward/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 bg-white rounded-[10px] p-2 ">
+        <img src={linkedinIcon || "/placeholder.svg"} className="h-[25px] w-[25px]" alt="LinkedIn" />
+      </a>
+      <a href="https://www.instagram.com/gursha.rewards/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
+        <img src={instagramIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com/@gursha.app" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
+        <img src={tiktokIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="TikTok" />
+      </a>
     </div>
-
-  </div>
-
-
-  {/* Social icons row */}
-  <div className="w-full flex justify-between pt-[15px] px-[14px]">
-    <a href="#" className="hover:opacity-80 transition-opacity">
-      <img src={instagramIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="Instagram" />
-    </a>
-    <a href="#" className="hover:opacity-80 transition-opacity">
-      <img src={telegramIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="Telegram" />
-    </a>
-    <a href="#" className="hover:opacity-80 transition-opacity">
-      <img src={tiktokIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="TikTok" />
-    </a>
   </div>
 </div>
 
