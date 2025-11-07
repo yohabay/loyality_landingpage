@@ -520,7 +520,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 
     {/* Social icons row */}
     <div className="w-full flex justify-between pt-[15px] px-[14px]">
-      <a href="https://www.linkedin.com/company/shewaber-reward/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 bg-white rounded-[10px] p-1.5">
+      <a href="https://www.linkedin.com/company/shewaber-reward/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 bg-white rounded-[10px] p-[5px]">
         <img src={linkedinIcon || "/placeholder.svg"} className="h-[30px] w-[30px]" alt="LinkedIn" />
       </a>
       <a href="https://www.instagram.com/gursha.rewards/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
