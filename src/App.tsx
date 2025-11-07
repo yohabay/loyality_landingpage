@@ -6,7 +6,6 @@ import { useState } from "react"
 import AppleIcon from "./images/applIcon.png"
 import applogo from "./images/applogo.png"
 import applogowithtext from "./images/applogowithtext.png"
-import birr from "./images/birr.png"
 import bottomBgimage from "./images/bottomBgimage.png"
 import cashbackoffer from "./images/cashbackoffer.svg"
 import collectIcon from "./images/collecticon.svg"
@@ -14,16 +13,13 @@ import comletinnerIcon from "./images/comletinnerIcon.svg"
 import completoffer from "./images/completoffer.svg"
 import googleplayIcon from "./images/googleplayIcon.png"
 import gradientColor from "./images/gradientColor.png"
-import pro1 from "./images/productlist/pro1.png"
-import pro2 from "./images/productlist/pro2.png"
-import pro3 from "./images/productlist/pro3.png"
+// import pro1 from "./images/productlist/pro1.png"
+// import pro2 from "./images/productlist/pro2.png"
+// import pro3 from "./images/productlist/pro3.png"
 import scanIcon from "./images/scanIcon.svg"
-import sup1 from "./images/supermarketlist/sup1.svg"
-import sup2 from "./images/supermarketlist/sup2.svg"
-import sup3 from "./images/supermarketlist/sup3.svg"
-import sup4 from "./images/supermarketlist/sup4.svg"
-import carticon from "./images/svg/cartIcon.svg"
-import flashIcon from "./images/svg/flashIcon.svg"
+// import sup1 from "./images/supermarketlist/sup1.svg"
+// import sup2 from "./images/supermarketlist/sup2.svg" 
+// import flashIcon from "./images/svg/flashIcon.svg"
 import instagramIcon from "./images/svg/instagram.svg"
 import telegramIcon from "./images/svg/telegram.svg"
 import tiktokIcon from "./images/svg/tiktok.svg"
@@ -85,17 +81,20 @@ function FAQAccordion() {
   return (
     <div className="flex flex-col gap-2">
       {faqs.map((faq, i) => (
-        <div key={i}>
+        <div
+          key={i}
+          className={`w-full mt-[15px] px-[20px] py-[17px] text-[15px] font-[500] text-[#363636] hover:bg-gray-200 transition-all duration-100 ${openId === i ? 'rounded-[35px]' : 'rounded-[35px]'}`}
+          style={{ background: '#D4D4D440', border: '0.5px solid #D4D4D4' }}
+        >
           <button
             onClick={() => setOpenId(openId === i ? null : i)}
-            className="w-full rounded-full mt-[15px] px-[20px] py-[17px] text-[15px] font-[500] text-[#363636] flex items-center justify-between hover:bg-gray-200 transition-colors text-left"
-            style={{ background: '#D4D4D440', border: '0.5px solid #D4D4D4' }}
+            className="w-full flex items-center justify-between text-left bg-transparent border-none p-0"
           >
-            <span>{faq.question}</span>
-            <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${openId === i ? "rotate-180" : ""}`} />
+            <span className="truncate">{faq.question}</span>
+            <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform duration-300 ${openId === i ? "rotate-180" : ""}`} />
           </button>
           {openId === i && (
-            <div className="mt-2 px-[20px] py-[15px] rounded-lg text-[14px] text-gray-700 bg-white border" style={{ border: '0.5px solid #D4D4D4' }}>
+            <div className="py-[15px] text-[13px] text-gray-500">
               {faq.answer}
             </div>
           )}
@@ -234,14 +233,14 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
   <div className="flex flex-col gap-6 mb-8">
     {[
       {
-        icon: <img src={scanIcon} className="h-[30px] w-[30px]" alt="Scan" />,
+        icon: <img src={scanIcon} className="h-[35px] w-[35px]" alt="Scan" />,
         title: "Scan your receipt",
         sub: "From Our Partner Supermarkets",
       },
       {
-        icon: <img src={collectIcon} className="h-[30px] w-[30px]" alt="Collect" />,
-        title: "Collect Cashback",
-        sub: "Uploaded Receipts earns you Cashback & Saves you Money",
+        icon: <img src={collectIcon} className="h-[35px] w-[35px]" alt="Collect" />,
+        title: "Earn Gursha points ",
+        sub: "Your receipts earns you Gursha points and saves you money for every spend (1 Gursha point = 1 ETB)",
       },
       {
         icon: <div className="relative"><img src={completoffer} className="h-[30px] w-[30px]" alt="Complete" /><img src={comletinnerIcon} className="absolute inset-0 h-3 w-3 m-auto" alt="Inner" /></div>,
@@ -249,9 +248,9 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
         sub: "Shop from Bonus Offers & Earn extra Cashback rewards",
       },
       {
-        icon: <img src={cashbackoffer} className="h-[30px] w-[30px]" alt="Cashback" />,
-        title: "Cashback to Discounts",
-        sub: "Convert Cashback into Supermarket Discount Coupons",
+        icon: <img src={cashbackoffer} className="h-[35px] w-[35px]" alt="Cashback" />,
+        title: "Gursha points to Discounts",
+        sub: "Convert your Gursha points into supermarket Disocunt Coupons",
       },
     ].map((step, i) => (
       <div
@@ -259,7 +258,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
         className="flex flex-col gap-2 bg-white rounded-[25px] p-[20px] border"
         style={{ border: '0.5px solid #D4D4D4' }} // Inner border
       >
-        <div className="rounded-lg flex h-[30px] w-[30px] items-center justify-center flex-shrink-0">
+        <div className="rounded-lg flex h-[35px] w-[35px] items-center justify-center flex-shrink-0">
           {step.icon}
         </div>
         <div className="">
@@ -276,7 +275,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 
 
       {/* Partners */}
-      <section className="mx-auto max-w-full px-6 md:px-12 lg:px-16 mt-8 md:mt-12">
+      {/* <section className="mx-auto max-w-full px-6 md:px-12 lg:px-16 mt-8 md:mt-12">
          <p className="">
           Our partner
         </p>
@@ -312,10 +311,11 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Offers */}
- <section className="mx-auto max-w-full px-6 md:px-12 lg:px-16 mt-8 md:mt-12 mb-12">
+      </section> */}
+     
+     {/* Offers List */}
+      
+  {/* <section className="mx-auto max-w-full px-6 md:px-12 lg:px-16 mt-8 md:mt-12 mb-12">
   <h2 className="text-[20px] font-black mb-6 text-black flex items-center gap-2">
     <img src={flashIcon} className="h-6 w-6" alt="Flash" />
     Popular Offers
@@ -356,16 +356,32 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
         left: "13 days left",
       },
     ].map((o, i) => (
-      <div key={i} className="relative rounded-2xl bg-white shadow-md p-4 md:p-5 border border-gray-100">
-        {/* Days left badge */}
-        <div className="absolute top-0 right-0 flex items-center justify-center" style={{ width: '60px', height: '20px', borderTopRightRadius: '20px', borderBottomLeftRadius: '10px', background: 'linear-gradient(180deg, #FF6600 0%, #FF0000 100%)', opacity: 1, transform: 'rotate(0deg)' }}>
-          <span className="text-white font-bold" style={{ fontSize: '7px',fontWeight: "bold"}}>{o.left}</span>
+      <div
+        key={i}
+        className="relative rounded-2xl bg-white shadow-md p-4 md:p-5 border border-gray-100"
+      >
+        <div
+          className="absolute top-0 right-0 flex items-center justify-center"
+          style={{
+            width: "60px",
+            height: "20px",
+            borderTopRightRadius: "20px",
+            borderBottomLeftRadius: "10px",
+            background: "linear-gradient(180deg, #FF6600 0%, #FF0000 100%)",
+            opacity: 1,
+            transform: "rotate(0deg)",
+          }}
+        >
+          <span
+            className="text-white font-bold"
+            style={{ fontSize: "7px", fontWeight: "bold" }}
+          >
+            {o.left}
+          </span>
         </div>
 
         <div className="flex flex-col gap-6">
-          {/* Top row: Product Image, Badge, Title, Store */}
           <div className="flex gap-4">
-            {/* Product Image */}
             <div className="flex-shrink-0">
               <img
                 src={o.img || "/placeholder.svg"}
@@ -374,41 +390,54 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
               />
             </div>
 
-            {/* Content */}
             <div className="flex-1 min-w-0">
-              {/* Badge */}
               <div className="inline-block bg-[#FF660059] text-[#613700] px-3 py-1 rounded-lg text-xs font-bold mb-2">
                 {o.badge}
               </div>
-              {/* Title */}
               <div className="font-bold text-[12px] text-black">{o.title}</div>
-              {/* Store with icon */}
               <div className="flex items-center gap-1 text-black">
-                    <div className="text-[10px] text-black mt-1">
-                      <span style={{fontWeight:700 , paddingRight:3}}>0%</span>
-                      <span>completed</span>
-                    </div>
-                <img src={o.icon || "/placeholder.svg"} className="w-[15px] h-[15px] rounded-full" alt="Store icon" />
+                <div className="text-[10px] text-black mt-1">
+                  <span style={{ fontWeight: 700, paddingRight: 3 }}>0%</span>
+                  <span>completed</span>
+                </div>
+                <img
+                  src={o.icon || "/placeholder.svg"}
+                  className="w-[15px] h-[15px] rounded-full"
+                  alt="Store icon"
+                />
                 <span className="text-[10px]">{o.store}</span>
               </div>
             </div>
           </div>
 
-          {/* Bottom row: Progress bar and Reward spanning full width */}
-          <div className="flex items-center justify-between pl-[15px]"> 
+          <div className="flex items-center justify-between pl-[15px]">
             <div className="flex-1 mr-4">
               <div className="flex gap-1">
                 {[...Array(o.total)].map((_, idx) => (
-                  <div key={idx} className={`h-2 flex-1 rounded-full ${idx < o.progress ? 'bg-orange-500' : ''}`} style={{ border: '1px solid #D4D4D4', background: '#D9D9D959' }}></div>
+                  <div
+                    key={idx}
+                    className={`h-2 flex-1 rounded-full ${
+                      idx < o.progress ? "bg-orange-500" : ""
+                    }`}
+                    style={{
+                      border: "1px solid #D4D4D4",
+                      background: "#D9D9D959",
+                    }}
+                  ></div>
                 ))}
               </div>
-      
             </div>
             <div className="flex items-center gap-1.5">
               <span className="font-bold text-[10px]">Get</span>
-              <span className="font-[900] text-[15px] text-[#613700]"> {o.reward}</span>
-              <div className="">
-                <img src={birr || "/placeholder.svg"} className="h-[17px]" alt="Birr" />
+              <span className="font-[900] text-[15px] text-[#613700]">
+                {o.reward}
+              </span>
+              <div>
+                <img
+                  src={birr || "/placeholder.svg"}
+                  className="h-[17px]"
+                  alt="Birr"
+                />
               </div>
             </div>
           </div>
@@ -416,7 +445,9 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
       </div>
     ))}
   </div>
-</section>
+</section> */}
+
+     
 
 
       {/* FAQ */}
