@@ -133,16 +133,16 @@ export default function App() {
 
   {/* Content */}
   <div className="relative z-10 mx-auto max-w-full px-6 md:px-12 lg:px-16 pt-8 md:pt-12 pb-8 text-white">
-  <img src={applogowithtext} alt="Gursha Rewards" className="h-12 md:h-14 mb-6" />
+  <img src={applogowithtext} alt="Gursha Rewards" className="h-10 mb-6" />
 
   {/* Main Title */}
   <h1
     className="font-extrabold leading-tight mb-4"
     style={{
-      fontFamily: "'Rammetto One', cursive",
+      fontFamily: "'Rammetto One', cursive", 
       fontWeight: 400,
       fontStyle: "normal",
-      fontSize: "30px",
+      fontSize: "32px",
       lineHeight: "35px",
       letterSpacing: "0%",
       verticalAlign: "middle",
