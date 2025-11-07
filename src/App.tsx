@@ -21,7 +21,7 @@ import scanIcon from "./images/scanIcon.svg"
 // import sup2 from "./images/supermarketlist/sup2.svg" 
 // import flashIcon from "./images/svg/flashIcon.svg"
 import instagramIcon from "./images/svg/instagram.svg"
-import linkedinIcon from "./images/svg/linkdin.png"
+import linkedinIcon from "./images/svg/linkedin.svg"
 // import linkedinIcon from "./images/svg/icons8-linkedin-24.png"
 import tiktokIcon from "./images/svg/tiktok.svg"
 
@@ -520,8 +520,8 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 
     {/* Social icons row */}
     <div className="w-full flex justify-between pt-[15px] px-[14px]">
-      <a href="https://www.linkedin.com/company/shewaber-reward/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 bg-white rounded-[10px] p-2 ">
-        <img src={linkedinIcon || "/placeholder.svg"} className="h-[25px] w-[25px]" alt="LinkedIn" />
+      <a href="https://www.linkedin.com/company/shewaber-reward/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 bg-white rounded-[10px] p-1.5">
+        <img src={linkedinIcon || "/placeholder.svg"} className="h-[30px] w-[30px]" alt="LinkedIn" />
       </a>
       <a href="https://www.instagram.com/gursha.rewards/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
         <img src={instagramIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="Instagram" />
