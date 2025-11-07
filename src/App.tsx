@@ -84,7 +84,7 @@ function FAQAccordion() {
       {faqs.map((faq, i) => (
         <div
           key={i}
-          className={`w-full mt-[15px] px-[20px] py-[17px] text-[15px] font-[500] text-[#363636] hover:bg-gray-200 transition-all duration-300 ${openId === i ? 'rounded-[35px]' : 'rounded-[30px]'}`}
+          className={`w-full mt-[15px] px-[20px] py-[17px] text-[15px] font-[500] text-[#363636] hover:bg-gray-200 transition-all duration-100 ${openId === i ? 'rounded-[35px]' : 'rounded-[30px]'}`}
           style={{ background: '#D4D4D440', border: '0.5px solid #D4D4D4' }}
         >
           <button
@@ -95,7 +95,7 @@ function FAQAccordion() {
             <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform duration-300 ${openId === i ? "rotate-180" : ""}`} />
           </button>
           {openId === i && (
-            <div className="mt-2 px-[20px] py-[15px] text-[14px] text-gray-700">
+            <div className="py-[15px] text-[14px] text-{#363636}">
               {faq.answer}
             </div>
           )}
