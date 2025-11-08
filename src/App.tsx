@@ -143,7 +143,7 @@ export default function App() {
       fontFamily: "'Rammetto One', cursive", 
       fontWeight: 400,
       fontStyle: "normal",
-      fontSize: "32px",
+      fontSize: "37px",
       lineHeight: "35px",
       letterSpacing: "0%",
       verticalAlign: "middle",
@@ -235,24 +235,24 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
   <div className="flex flex-col gap-6 mb-8">
     {[
       {
-        icon: <img src={scanIcon} className="h-[35px] w-[35px]" alt="Scan" />,
+        icon: <img src={scanIcon} className="h-[40px] w-[40px]" alt="Scan" />,
         title: "Scan your receipt",
-        sub: "From Our Partner Supermarkets",
+        sub: "Simply upload your purchase receipts into the App",
       },
       {
-        icon: <img src={collectIcon} className="h-[35px] w-[35px]" alt="Collect" />,
+        icon: <img src={collectIcon} className="h-[40px] w-[40px]" alt="Collect" />,
         title: "Earn Gursha points ",
-        sub: "Your receipts earns you Gursha points and saves you money for every spend (1 Gursha point = 1 ETB)",
+        sub: "Collect Gursha points and save on every supermarket purchases (1 Gursha point  = 1 ETB)",
       },
       {
-        icon: <div className="relative"><img src={completoffer} className="h-[30px] w-[30px]" alt="Complete" /><img src={comletinnerIcon} className="absolute inset-0 h-3 w-3 m-auto" alt="Inner" /></div>,
-        title: "Complete Offers",
-        sub: "Shop from Bonus Offers & Earn extra Gursha points",
+        icon: <div className="relative"><img src={completoffer} className="h-[40px] w-[40px]" alt="Complete" /><img src={comletinnerIcon} className="absolute inset-0 h-3 w-3 m-auto" alt="Inner" /></div>,
+        title: "Shop from Offers",
+        sub: "Shop from bonus offers to earn additional Gursha points",
       },
       {
-        icon: <img src={cashbackoffer} className="h-[35px] w-[35px]" alt="Cashback" />,
-        title: "Gursha points to Discounts",
-        sub: "Convert your Gursha points into supermarket Disocunt Coupons",
+        icon: <img src={cashbackoffer} className="h-[40px] w-[40px]" alt="Cashback" />,
+        title: "Discounts from points",
+        sub: "Convert your Gursha points into supermarket Discount Coupons",
       },
     ].map((step, i) => (
       <div
@@ -520,10 +520,10 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 
     {/* Social icons row */}
     <div className="w-full flex justify-between pt-[15px] px-[14px]">
-      <a href="https://www.linkedin.com/company/shewaber-reward/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 bg-white rounded-[10px] p-[5px]">
+      <a href="https://www.linkedin.com/company/shewaber-reward/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 bg-white rounded-[12px] p-[5px]">
         <img src={linkedinIcon || "/placeholder.svg"} className="h-[30px] w-[30px]" alt="LinkedIn" />
       </a>
-      <a href="https://www.instagram.com/gursha.rewards/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
+      <a href="https://www.instagram.com/gursha.rewards/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300"> 
         <img src={instagramIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="Instagram" />
       </a>
       <a href="https://www.tiktok.com/@gursha.app" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
