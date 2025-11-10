@@ -6,6 +6,7 @@ import { useState } from "react"
 import AppleIcon from "./images/applIcon.png"
 import applogo from "./images/applogo.png"
 import applogowithtext from "./images/applogowithtext.png"
+import birr from "./images/birr.png"
 import bottomBgimage from "./images/bottomBgimage.png"
 import cashbackoffer from "./images/cashbackoffer.svg"
 import collectIcon from "./images/collecticon.svg"
@@ -150,20 +151,36 @@ export default function App() {
       whiteSpace: "pre-wrap",
     }}
   >
-    Supermarket{"\n"}Saving App!
+    Supermarket{"\n"}Money Saving App!
   </h1>
 
   {/* Subtitle */}
-  <p
-    className="mb-8"
-    style={{
-      fontWeight: 400,
-      fontStyle: "normal",
-      fontSize: "15px",
-    }}
-  >
-    Cashback from every <span style={{ fontWeight: 700 }}>Receipts Uploaded!</span>
-  </p>
+<p
+  className="mb-8"
+  style={{
+    fontWeight: 400,
+    fontStyle: "normal",
+    fontSize: "15px",
+  }}
+>
+  Cashback from every Receipts Uploaded!{" "}
+  <span style={{ fontWeight: 700 }}>
+    Upto{" "}
+    <img
+      src={birr}
+      alt="Birr"
+      style={{
+        width: "15px",
+        height: "15px",
+        display: "inline",
+        verticalAlign: "middle",
+        marginRight: "4px",
+      }}
+    />
+    5% Gursha points for Scanned Receipts!
+  </span>
+</p>
+
 
   {/* Store Buttons — Image Only */}
   <div className="flex flex-row gap-3 mb-6 w-full flex-nowrap">
