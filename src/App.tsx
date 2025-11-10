@@ -542,7 +542,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
       <a href="https://www.instagram.com/gursha.rewards/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300"> 
         <img src={instagramIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="Instagram" />
       </a>
-      <a href="https://www.tiktok.com/@gursha.app" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
+      <a href="tiktok.com/@gursha.rewards" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
         <img src={tiktokIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="TikTok" />
       </a>
     </div>
