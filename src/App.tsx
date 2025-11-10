@@ -144,12 +144,12 @@ export default function App() {
       fontFamily: "'Rammetto One', cursive", 
       fontWeight: 400,
       fontStyle: "normal",
-      fontSize: "37px",
-      lineHeight: "35px",
+      fontSize: "30px",
+      lineHeight: "35px", 
       letterSpacing: "0%",
       verticalAlign: "middle",
       whiteSpace: "pre-wrap",
-    }}
+    }} 
   >
     Supermarket{"\n"}Money Saving App!
   </h1>
@@ -163,9 +163,8 @@ export default function App() {
     fontSize: "15px",
   }}
 >
-  Cashback from every Receipts Uploaded!{" "}
+      Upto{" "}
   <span style={{ fontWeight: 700 }}>
-    Upto{" "}
     <img
       src={birr}
       alt="Birr"
