@@ -2,6 +2,7 @@
 
 import { ChevronDown } from "lucide-react"
 import { useState } from "react"
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
 
 import AppleIcon from "./images/applIcon.png"
 import applogo from "./images/applogo.png"
@@ -16,17 +17,22 @@ import googleplayIcon from "./images/googleplayIcon.png"
 import gradientColor from "./images/gradientColor.png"
 // import pro1 from "./images/productlist/pro1.png"
 // import pro2 from "./images/productlist/pro2.png"
-// import pro3 from "./images/productlist/pro3.png" 
+// import pro3 from "./images/productlist/pro3.png"
 import scanIcon from "./images/scanIcon.svg"
 // import sup1 from "./images/supermarketlist/sup1.svg"
-// import sup2 from "./images/supermarketlist/sup2.svg" 
+// import sup2 from "./images/supermarketlist/sup2.svg"
 // import flashIcon from "./images/svg/flashIcon.svg"
 import instagramIcon from "./images/svg/instagram.svg"
 import linkedinIcon from "./images/svg/linkedin.svg"
 // import linkedinIcon from "./images/svg/icons8-linkedin-24.png"
 import tiktokIcon from "./images/svg/tiktok.svg"
 
-function FAQAccordion() {
+import DeleteAccount from "./pages/DeleteAccount"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
+import TermsAndConditions from "./pages/TermsAndConditions"
+
+
+function Home() {
   const [openId, setOpenId] = useState<number | null>(null)
 
   const faqs = [
@@ -41,7 +47,7 @@ function FAQAccordion() {
     {
       question: "How does Gursha Rewards works?",
       answer: "Simply upload your purchase receipt to the app from one of our partner supermarkets and see your saving grow through Gursha points."
-    }, 
+    },
     {
       question: "What is an Offer?",
       answer: "Offers are bonus campaigns that help you earn more Gursha points through game-like progress, either by buying specific items or spending a set amount within the campaign period."
@@ -50,64 +56,35 @@ function FAQAccordion() {
       question: "What to do with my Gursha points?",
       answer: "Gursha points collected from a supermarket can be converted into a discount coupon, which will be deducted for your next purchase by giving the cashier your coupon code and pay only the remaining amounts."
     },
-
-    // {
-    //   question: "How long do my Gursha points stay valid?",
-    //   answer: "Gursha points have an expiry period set by the supermarket (usually 6–12 months). You can track expiration inside the app."
-    // },
-    // {
-    //   question: "Can I earn Gursha points for past purchases?",
-    //   answer: "Gursha points are only awarded for purchases made after you join and submit a valid receipt that were issued within 24 hours of purchase."
-    // },
-    // {
-    //   question: "Do all supermarkets offer the same rewards?",
-    //   answer: "No. Each supermarket runs its own promotions, rewards, and bonus campaigns but all work through Gursha Rewards."
-    // },
-    // {
-    //   question: "Can I transfer or share my Gursha points?",
-    //   answer: "Currently, Gursha points are linked to your account and cannot be transferred. Point gifting may be introduced later."
-    // },
-    // {
-    //   question: "How do supermarkets benefit?",
-    //   answer: "Supermarkets use Gursha Rewards to increase customer loyalty, boost repeat purchases, and understand shopper behavior for better offers."
-    // },
-    // {
-    //   question: "Does Gursha Rewards collect my personal spending data?",
-    //   answer: "Yes, but only to personalize offers and reward calculations. We do not share or sell your personal data your privacy is protected."
-    // },
-    // {
-    //   question: "What if my receipt is rejected?",
-    //   answer: "If a receipt is unclear, expired, or from a non-partner store, it may be rejected. But for the unclear ones you can always resubmit within 24 hours with a clearer photo."
-    // }
   ]
 
-  return (
-    <div className="flex flex-col gap-2">
-      {faqs.map((faq, i) => (
-        <div
-          key={i}
-          className={`w-full mt-[15px] px-[20px] py-[17px] text-[15px] font-[500] text-[#363636] hover:bg-gray-200 transition-all duration-100 ${openId === i ? 'rounded-[35px]' : 'rounded-[30px]'}`}
-          style={{ background: '#D4D4D440', border: '0.5px solid #D4D4D4' }}
-        >
-          <button
-            onClick={() => setOpenId(openId === i ? null : i)}
-            className="w-full flex items-center justify-between text-left bg-transparent border-none p-0"
+  function FAQAccordion() {
+    return (
+      <div className="flex flex-col gap-2">
+        {faqs.map((faq, i) => (
+          <div
+            key={i}
+            className={`w-full mt-[15px] px-[20px] py-[17px] text-[15px] font-[500] text-[#363636] hover:bg-gray-200 transition-all duration-100 ${openId === i ? 'rounded-[35px]' : 'rounded-[30px]'}`}
+            style={{ background: '#D4D4D440', border: '0.5px solid #D4D4D4' }}
           >
-            <span>{faq.question}</span>
-            <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform duration-300 ${openId === i ? "rotate-180" : ""}`} />
-          </button>
-          {openId === i && (
-            <div className="py-[15px] text-[14px] text-{#363636}">
-              {faq.answer}
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  )
-}
+            <button
+              onClick={() => setOpenId(openId === i ? null : i)}
+              className="w-full flex items-center justify-between text-left bg-transparent border-none p-0"
+            >
+              <span>{faq.question}</span>
+              <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform duration-300 ${openId === i ? "rotate-180" : ""}`} />
+            </button>
+            {openId === i && (
+              <div className="py-[15px] text-[14px] text-{#363636}">
+                {faq.answer}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    )
+  }
 
-export default function App() {
   return (
     <div className="min-h-screen font-sans bg-[#fff] w-full">
       {/* Top header gradient */}
@@ -548,12 +525,21 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
     </div>
   </div>
 </div>
-
-    </div>
-  )
+</div>
+)
 }
 
-
-
+export default function App() {
+return (
+<Router>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+    <Route path="/termandconditions" element={<TermsAndConditions />} />
+    <Route path="/deleteaccount" element={<DeleteAccount />} />
+  </Routes>
+</Router>
+)
+}
 
 
