@@ -452,22 +452,22 @@ export default function Home() {
               </p>
               <div className="flex items-center space-x-6 mt-4 md:mt-0">
                 <a
-                  href="#"
+                  href="/privacypolicy"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
                   Privacy
                 </a>
                 <a
-                  href="#"
+                  href="/termandconditions"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
                   Terms
                 </a>
                 <a
-                  href="#"
+                  href="/deleteaccount"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
-                  Cookies
+                  Delete Account
                 </a>
               </div>
             </div>

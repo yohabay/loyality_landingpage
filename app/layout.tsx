@@ -1,18 +1,18 @@
-import { Poppins } from "next/font/google";
 import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
-  subsets: ["latin"],
+  subsets: ["latin"], 
   display: "swap",
   variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+}); 
 
 export const metadata: Metadata = {
-  title: "Supermarket Loyalty App",
+  title: "Gursha Rewards - Supermarket Loyalty App",
   description:
-    "Get rewarded for your loyalty with our supermarket app.",
+    "Get rewarded for your loyalty with Gursha Rewards supermarket app.",
   generator: "v0.dev",
   icons: {
     icon: "/gursha-app-logo.png?v=2",
