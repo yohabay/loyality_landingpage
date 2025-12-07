@@ -470,15 +470,12 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
       backgroundImage: `url(${bottomBgimage})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
-
     }}
   />
   {/* Logo on top overlapping */}
   <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-20">
     <img src={applogo || "/placeholder.svg"} className="h-16 w-16 md:h-20 md:w-20" alt="App Logo" />
   </div>
-yyoha6070
-
   {/* Content wrapper */}
   <div className="relative z-10">
     {/* Heading */}
