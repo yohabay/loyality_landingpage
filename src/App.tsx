@@ -4,16 +4,16 @@ import { ChevronDown } from "lucide-react"
 import { useState } from "react"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
 
-import AppleIcon from "./images/applIcon.png"
 import applogo from "./images/applogo.png"
 import applogowithtext from "./images/applogowithtext.png"
+import AppleIcon from "./images/appstorecommingsoon.png"
 import birr from "./images/birr.png"
 import bottomBgimage from "./images/bottomBgimage.png"
 import cashbackoffer from "./images/cashbackoffer.svg"
 import collectIcon from "./images/collecticon.svg"
 import comletinnerIcon from "./images/comletinnerIcon.svg"
 import completoffer from "./images/completoffer.svg"
-import googleplayIcon from "./images/googleplayIcon.png"
+import googleplayIcon from "./images/googleplay.png"
 import gradientColor from "./images/gradientColor.png"
 // import pro1 from "./images/productlist/pro1.png"
 // import pro2 from "./images/productlist/pro2.png"
@@ -166,27 +166,23 @@ function Home() {
     href="https://play.google.com/store/apps/details?id=com.gursha_rewards"
     target="_blank"
     rel="noopener noreferrer"
-    className="w-full bg-white border border-gray-300 rounded-lg p-[10px] flex items-center justify-center hover:bg-gray-50 transition-colors"
+    className=""
   >
     <img
       src={googleplayIcon}
       alt="Google Play Button"
-      className="h-[20px] w-[20px]"
-    />
-    <span className="text-[11px] font-[650] text-black pl-2">
-      Google Play
-    </span>
+      className="h-[46px] w-[155px]"
+    /> 
   </a>
 </div>
 
       <div className="flex-1 min-w-0">
-      <button className="w-full bg-white border border-gray-300 rounded-lg p-[10px] flex items-center justify-center hover:bg-gray-50 transition-colors">
+      <button className="">
          <img
         src={AppleIcon}
         alt="Apple Store Button"
-        className="h-[20px] w-[20px]"
+      className="h-[46px] w-[155px]"
       />
-<span className="text-[11px] font-[650] text-black pl-2">Coming Soon ...</span>
       </button>
     </div>
 
@@ -481,6 +477,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
   <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-20">
     <img src={applogo || "/placeholder.svg"} className="h-16 w-16 md:h-20 md:w-20" alt="App Logo" />
   </div>
+yyoha6070
 
   {/* Content wrapper */}
   <div className="relative z-10">
@@ -490,38 +487,34 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
     </h2>
 
     {/* Buttons row */}
-   <div className="flex flex-row gap-3 mb-6 w-full flex-nowrap">
+   <div className="flex flex-row gap-3 mb-6 w-full flex-nowrap"> 
 
-    <div className="flex-1 min-w-0">
+   <div className="flex-1 min-w-0">
   <a
     href="https://play.google.com/store/apps/details?id=com.gursha_rewards"
     target="_blank"
     rel="noopener noreferrer"
-    className="w-full bg-white border border-gray-300 rounded-lg p-[10px] flex items-center justify-center hover:bg-gray-50 transition-colors"
+    className=""
   >
     <img
       src={googleplayIcon}
       alt="Google Play Button"
-      className="h-[20px] w-[20px]"
-    />
-    <span className="text-[11px] font-[650] text-black pl-2">
-      Google Play
-    </span>
+      className="h-[46px] w-[155px]"
+    /> 
   </a>
 </div>
 
-   <div className="flex-1 min-w-0">
-     <button className="w-full bg-white border border-gray-300 rounded-lg p-2 flex items-center justify-center hover:bg-gray-50 transition-colors shadow-sm">
-       <img
-         src={AppleIcon}
-         alt="Apple Store Button"
-         className="h-5 w-5"
-       />
-       <span className="text-xs font-semibold text-black pl-2">Coming Soon ...</span>
-     </button>
-   </div>
+      <div className="flex-1 min-w-0">
+      <button className="">
+         <img
+        src={AppleIcon}
+        alt="Apple Store Button"
+      className="h-[46px] w-[155px]"
+      />
+      </button>
+    </div>
 
- </div>
+  </div>
 
 
 
