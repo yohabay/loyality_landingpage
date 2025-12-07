@@ -10,10 +10,9 @@ import {
   Tag,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import googlePlayIcon from '../images/googleplay.png';
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,7 +49,7 @@ export default function Home() {
                 className="flex flex-col items-center"
               >
                 <img
-                  src={googlePlayIcon}
+                  src="/googleplay.png"
                   alt="Google Play"
                   width={60}
                   height={60}
@@ -201,7 +200,7 @@ export default function Home() {
                 <p className="text-gray-600 mb-2 text-sm">
                   Automatically earn loyalty points with every purchase you make
                   in-store.
-                </p>
+                </p> 
               </div>
 
               <div className="bg-orange-50 rounded-xl px-7 py-6 shadow hover:shadow-md transition">
@@ -322,7 +321,7 @@ export default function Home() {
                 className="flex flex-col items-center"
               >
                 <img
-                  src={googlePlayIcon}
+                  src="/googleplay.png"
                   alt="Google Play"
                   width={60}
                   height={60}
@@ -415,7 +414,7 @@ export default function Home() {
                   className="flex flex-col items-center"
                 >
                   <img
-                    src={googlePlayIcon}
+                    src="/googleplay.png"
                     alt="Google Play"
                     width={60}
                     height={60}
