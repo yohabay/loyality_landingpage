@@ -9,10 +9,11 @@ import {
   ShoppingBag,
   Tag,
 } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false); 
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,28 +45,35 @@ export default function Home() {
 
             <div className="flex flex-row gap-3 sm:gap-2 justify-center lg:justify-start px-2">
               <a
-                href="https://play.google.com/store/apps/details?id=com.gursha_rewards"
+                href="#"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center"
               >
-                <img
-                  src="/googleplay.png"
+                <Image
+                  src="/playstorebutton.png"
                   alt="Google Play"
-                  width={60}
+                  width={150}
                   height={60}
+                  layout="fixed"
                   style={{
+                    width: "150px",
+                    height: "60px",
                     objectFit: "contain",
                   }}
                 />
+                <span style={{ fontSize: "10px" }}>Comming soon...</span>
               </a>
 
               <a href="#" className="flex flex-col items-center">
-                <img
+                <Image
                   src="/applebutton.png"
                   alt="App Store"
                   width={150}
                   height={60}
+                  layout="fixed"
                   style={{
+                    width: "150px",
+                    height: "60px",
                     objectFit: "contain",
                   }}
                 />
@@ -200,7 +208,7 @@ export default function Home() {
                 <p className="text-gray-600 mb-2 text-sm">
                   Automatically earn loyalty points with every purchase you make
                   in-store.
-                </p> 
+                </p>
               </div>
 
               <div className="bg-orange-50 rounded-xl px-7 py-6 shadow hover:shadow-md transition">
@@ -316,28 +324,35 @@ export default function Home() {
             </p>
             <div className="flex flex-row gap-3 sm:gap-2 justify-center lg:justify-start px-2">
               <a
-                href="https://play.google.com/store/apps/details?id=com.gursha_rewards"
+                href="#"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center"
               >
-                <img
-                  src="/googleplay.png"
+                <Image
+                  src="/playstorebutton.png"
                   alt="Google Play"
-                  width={60}
+                  width={150}
                   height={60}
+                  layout="fixed"
                   style={{
+                    width: "150px",
+                    height: "60px",
                     objectFit: "contain",
                   }}
                 />
+                <span style={{ fontSize: "10px" }}>Comming soon...</span>
               </a>
 
               <a href="#" className="flex flex-col items-center">
-                <img
+                <Image
                   src="/applebutton.png"
                   alt="App Store"
                   width={150}
                   height={60}
+                  layout="fixed"
                   style={{
+                    width: "150px",
+                    height: "60px",
                     objectFit: "contain",
                   }}
                 />
@@ -355,12 +370,15 @@ export default function Home() {
             {/* Logo & Description */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <img
+                <Image
                   src="/shewaberlogo.png"
                   alt="shewaber rewards logo"
-                  width={100}
+                  width={120}
                   height={50}
+                  layout="fixed"
                   style={{
+                    width: "100px",
+                    height: "50px",
                     objectFit: "contain",
                   }}
                   className="rounded-lg"
@@ -409,17 +427,18 @@ export default function Home() {
               <h4 className="font-semibold text-lg">Download App</h4>
               <div className="flex flex-col gap-2">
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.gursha_rewards"
+                  href="#"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center"
                 >
-                  <img
-                    src="/googleplay.png"
+                  <Image
+                    src="/playstorebutton.png"
                     alt="Google Play"
-                    width={60}
-                    height={60}
+                    width={150}
+                    height={54}
                     style={{ objectFit: "contain" }}
                   />
+                  <span style={{ fontSize: "10px" }}>Coming soon...</span>
                 </a>
               </div>
             </div>

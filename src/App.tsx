@@ -13,7 +13,7 @@ import cashbackoffer from "./images/cashbackoffer.svg"
 import collectIcon from "./images/collecticon.svg"
 import comletinnerIcon from "./images/comletinnerIcon.svg"
 import completoffer from "./images/completoffer.svg"
-import googleplayIcon from "./images/googleplay.png"
+import googleplayIcon from "./images/googleplayIcon.png"
 import gradientColor from "./images/gradientColor.png"
 // import pro1 from "./images/productlist/pro1.png"
 // import pro2 from "./images/productlist/pro2.png"
@@ -161,17 +161,23 @@ function Home() {
   {/* Store Buttons — Image Only */}
   <div className="flex flex-row gap-3 mb-6 w-full flex-nowrap">
 
-    <div className="flex-1 min-w-0 flex items-center justify-center">
-      <a href="https://play.google.com/store/apps/details?id=com.gursha_rewards" target="_blank" >
-         <img
-        src={googleplayIcon}
-        alt="Google Play"
-        width={150}
-        height={60}
-        style={{ objectFit: "contain" }}
-      />
-      </a>
-    </div>
+   <div className="flex-1 min-w-0">
+  <a
+    href="https://play.google.com/store/apps/details?id=com.gursha_rewards"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full bg-white border border-gray-300 rounded-lg p-[10px] flex items-center justify-center hover:bg-gray-50 transition-colors"
+  >
+    <img
+      src={googleplayIcon}
+      alt="Google Play Button"
+      className="h-[20px] w-[20px]"
+    />
+    <span className="text-[11px] font-[650] text-black pl-2">
+      Google Play
+    </span>
+  </a>
+</div>
 
       <div className="flex-1 min-w-0">
       <button className="w-full bg-white border border-gray-300 rounded-lg p-[10px] flex items-center justify-center hover:bg-gray-50 transition-colors">
@@ -486,16 +492,15 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
     {/* Buttons row */}
    <div className="flex flex-row gap-3 mb-6 w-full flex-nowrap">
 
-   <div className="flex-1 min-w-0 flex items-center justify-center">
-     <a href="https://play.google.com/store/apps/details?id=com.gursha_rewards" target="_blank" >
+   <div className="flex-1 min-w-0">
+     <button className="w-full bg-white border border-gray-300 rounded-lg p-2 flex items-center justify-center hover:bg-gray-50 transition-colors shadow-sm">
        <img
          src={googleplayIcon}
-         alt="Google Play"
-         width={150}
-         height={60}
-         style={{ objectFit: "contain" }}
+         alt="Google Play Button"
+         className="h-5 w-5"
        />
-     </a>
+       <span className="text-xs font-semibold text-black pl-2">Coming Soon ...</span>
+     </button>
    </div>
 
    <div className="flex-1 min-w-0">
