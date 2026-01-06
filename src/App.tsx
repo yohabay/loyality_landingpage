@@ -131,7 +131,7 @@ function Home() {
       fontFamily: "'Rammetto One', cursive",
       fontWeight: i18n.language === 'am' ? 700 : 400,
       fontStyle: "normal",
-      fontSize: "30px",
+      fontSize: "32px",
       lineHeight: "35px",
       letterSpacing: "0%",
       verticalAlign: "middle",
