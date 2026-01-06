@@ -66,7 +66,7 @@ function Home() {
         {faqs.map((faq, i) => (
           <div
             key={i}
-            className={`w-full mt-[15px] px-[20px] py-[17px] text-[15px] font-[500] text-[#363636] hover:bg-gray-200 transition-all duration-100 ${openId === i ? 'rounded-[35px]' : 'rounded-[30px]'}`}
+            className={`w-full mt-[15px] px-[20px] py-[17px] text-[15px] font-[700] text-[#363636] hover:bg-gray-200 transition-all duration-100 ${openId === i ? 'rounded-[35px]' : 'rounded-[30px]'}`}
             style={{ background: '#D4D4D440', border: '0.5px solid #D4D4D4' }}
           >
             <button
@@ -77,7 +77,7 @@ function Home() {
               <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform duration-300 ${openId === i ? "rotate-180" : ""}`} />
             </button>
             {openId === i && (
-              <div className="py-[15px] text-[14px] text-{#363636}">
+              <div className="py-[15px] text-[14px] text-{#363636} font-normal">
                 {faq.answer}
               </div>
             )}
@@ -124,15 +124,15 @@ function Home() {
     </button>
   </div>
 
-  {/* Main Title */}
+  {/* Main Title */} 
   <h1
     className="font-extrabold leading-tight mb-4"
     style={{
       fontFamily: "'Rammetto One', cursive",
-      fontWeight: i18n.language === 'am' ? 700 : 400,
+      fontWeight: i18n.language === 'am' ? 900 : 400,
       fontStyle: "normal",
-      fontSize: "32px",
-      lineHeight: "35px",
+      fontSize: i18n.language === 'am' ? "40px" : "30px",
+      lineHeight: i18n.language === 'am' ? "45px" : "35px",
       letterSpacing: "0%",
       verticalAlign: "middle",
       whiteSpace: "pre-wrap",
