@@ -120,7 +120,7 @@ function Home() {
       onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'am' : 'en')}
       className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
     >
-      {i18n.language === 'en' ? 'አማርኛ' : 'English'}
+      {i18n.language === 'en' ? 'አማርኛ' : 'እንግሊዝኛ'}
     </button>
   </div>
 
