@@ -129,7 +129,7 @@ function Home() {
     className="font-extrabold leading-tight mb-4"
     style={{
       fontFamily: "'Rammetto One', cursive",
-      fontWeight: 400,
+      fontWeight: i18n.language === 'am' ? 700 : 400,
       fontStyle: "normal",
       fontSize: "30px",
       lineHeight: "35px",
