@@ -2,6 +2,7 @@
 
 import { ChevronDown } from "lucide-react"
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
 
 import applogo from "./images/applogo.png"
@@ -33,28 +34,29 @@ import TermsAndConditions from "./pages/TermsAndConditions"
 
 
 function Home() {
+  const { t, i18n } = useTranslation()
   const [openId, setOpenId] = useState<number | null>(null)
 
   const faqs = [
     {
-      question: "What is Gursha Rewards?",
-      answer: "Gursha Rewards is a supermarket loyalty app that lets shoppers earn Gursha points, Maximize savings with exclusive offers, and save on every spend at our partner supermarkets."
+      question: t("What is Gursha Rewards?"),
+      answer: t("Gursha Rewards is a supermarket loyalty app that lets shoppers earn Gursha points, Maximize savings with exclusive offers, and save on every spend at our partner supermarkets.")
     },
     {
-      question: "How do I earn Gursha points?",
-      answer: "You earn gursha points by shopping at partner supermarkets and uploading your receipt in the app, (1 Gursha points = 1 ETB)."
+      question: t("How do I earn Gursha Points?"),
+      answer: t("You earn gursha points by shopping at partner supermarkets and uploading your receipt in the app, (1 Gursha points = 1 ETB).")
     },
     {
-      question: "How does Gursha Rewards works?",
-      answer: "Simply upload your purchase receipt to the app from one of our partner supermarkets and see your saving grow through Gursha points."
+      question: t("How does Gursha Rewards works?"),
+      answer: t("Simply upload your purchase receipt to the app from one of our partner supermarkets and see your saving grow through Gursha points.")
     },
     {
-      question: "What is an Offer?",
-      answer: "Offers are bonus campaigns that help you earn more Gursha points through game-like progress, either by buying specific items or spending a set amount within the campaign period."
+      question: t("What is an Offer?"),
+      answer: t("Offers are bonus campaigns that help you earn more Gursha points through game-like progress, either by buying specific items or spending a set amount within the campaign period.")
     },
     {
-      question: "What to do with my Gursha points?",
-      answer: "Gursha points collected from a supermarket can be converted into a discount coupon, which will be deducted for your next purchase by giving the cashier your coupon code and pay only the remaining amounts."
+      question: t("What to do with my Gursha points?"),
+      answer: t("Gursha points collected from a supermarket can be converted into a discount coupon, which will be deducted for your next purchase by giving the cashier your coupon code and pay only the remaining amounts.")
     },
   ]
 
@@ -112,23 +114,31 @@ function Home() {
 
   {/* Content */}
   <div className="relative z-10 mx-auto max-w-full px-6 md:px-12 lg:px-16 pt-8 md:pt-12 pb-8 text-white">
-  <img src={applogowithtext} alt="Gursha Rewards" className="h-10 mb-6" />
+  <div className="flex justify-between items-center mb-6">
+    <img src={applogowithtext} alt="Gursha Rewards" className="h-10" />
+    <button
+      onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'am' : 'en')}
+      className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
+    >
+      {i18n.language === 'en' ? 'አማርኛ' : 'English'}
+    </button>
+  </div>
 
   {/* Main Title */}
   <h1
     className="font-extrabold leading-tight mb-4"
     style={{
-      fontFamily: "'Rammetto One', cursive", 
+      fontFamily: "'Rammetto One', cursive",
       fontWeight: 400,
       fontStyle: "normal",
       fontSize: "30px",
-      lineHeight: "35px", 
+      lineHeight: "35px",
       letterSpacing: "0%",
       verticalAlign: "middle",
       whiteSpace: "pre-wrap",
-    }} 
+    }}
   >
-    Supermarket{"\n"}Money Saving App!
+    {t("Supermarket Money Saving App")}
   </h1>
 
   {/* Subtitle */}
@@ -153,7 +163,7 @@ function Home() {
         marginRight: "4px",
       }}
     />
-    5% Gursha points for Scanned Receipts!
+    {t("Up to 10% Gursha points for Scanned Receipts!")}
   </span>
 </p>
 
@@ -205,11 +215,11 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
    border: '0.5px solid #FF9800', // Inner border
  }}
 >
- <span className="block mb-2 text-black font-bold text-sm">How it Works?</span>
+ <span className="block mb-2 text-black font-bold text-sm">{t("How it Works?")}</span>
 <h3
   className="leading-tight font-extrabold text-[50px]"
   style={{
-  
+
     background: 'linear-gradient(90deg, #FF6600 0%, #FF0000 100%)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
@@ -218,7 +228,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
     verticalAlign: 'middle',
   }}
 >
-  It's sooo<br /> easy
+  {t("It's sooo easy")}
 </h3>
 
 </div>
@@ -232,23 +242,23 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
     {[
       {
         icon: <img src={scanIcon} className="h-[40px] w-[40px]" alt="Scan" />,
-        title: "Scan your receipt",
-        sub: "Simply upload your purchase receipts into the App",
+        title: t("1. Scan your receipt"),
+        sub: t("Simply upload your purchase receipts into the App"),
       },
       {
         icon: <img src={collectIcon} className="h-[40px] w-[40px]" alt="Collect" />,
-        title: "Earn Gursha points ",
-        sub: "Collect Gursha points and save on every supermarket purchases (1 Gursha point  = 1 ETB)",
+        title: t("2. Earn Gursha points"),
+        sub: t("Collect Gursha points and save on every supermarket purchases (1 Gursha point = 1 ETB)"),
       },
       {
         icon: <div className="relative"><img src={completoffer} className="h-[40px] w-[40px]" alt="Complete" /><img src={comletinnerIcon} className="absolute inset-0 h-3 w-3 m-auto" alt="Inner" /></div>,
-        title: "Shop from Offers",
-        sub: "Shop from bonus offers to earn additional Gursha points",
+        title: t("3. Shop from Offers"),
+        sub: t("Shop from bonus offers to earn additional Gursha points"),
       },
       {
         icon: <img src={cashbackoffer} className="h-[40px] w-[40px]" alt="Cashback" />,
-        title: "Discounts from points",
-        sub: "Convert your Gursha points into supermarket Discount Coupons",
+        title: t("4. Discounts from points"),
+        sub: t("Convert your Gursha points into supermarket Discount Coupons"),
       },
     ].map((step, i) => (
       <div
@@ -450,7 +460,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
 
       {/* FAQ */}
       <section className="mx-auto max-w-full px-6 md:px-12 lg:px-16 mt-8 md:mt-12 mb-12">
-        <h2 className="text-[30px] font-black mb-6 text-black">Asked Questions</h2>
+        <h2 className="text-[30px] font-black mb-6 text-black">{t("Asked Questions")}</h2>
         <FAQAccordion />
       </section>
 
@@ -480,7 +490,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
   <div className="relative z-10">
     {/* Heading */}
     <h2 className="text-[20px] font-semibold mb-6">
-      Download the app to save on every purchase!
+      {t("Download the app to save on every purchase!")}
     </h2>
 
     {/* Buttons row */}
