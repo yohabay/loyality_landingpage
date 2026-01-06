@@ -150,7 +150,7 @@ function Home() {
     fontSize: "15px",
   }}
 >
-      Upto{" "}
+
   <span style={{ fontWeight: 700 }}>
     <img
       src={birr}
