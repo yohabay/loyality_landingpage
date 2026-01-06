@@ -88,7 +88,7 @@ function Home() {
   }
 
   return (
-    <div className="min-h-screen font-sans bg-[#fff] w-full">
+    <div className={`min-h-screen ${i18n.language === 'am' ? 'amharic-font' : 'font-sans'} bg-[#fff] w-full`}>
       {/* Top header gradient */}
    <header className="w-full relative overflow-hidden">
   {/* Bottom background image */}
