@@ -530,10 +530,10 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
       <a href="https://www.linkedin.com/company/shewaber-reward/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 bg-white rounded-[12px] p-[5px]">
         <img src={linkedinIcon || "/placeholder.svg"} className="h-[30px] w-[30px]" alt="LinkedIn" />
       </a>
-      <a href="https://www.instagram.com/gursha.rewards/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300"> 
+      <a href="https://www.instagram.com/gursharewards/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300"> 
         <img src={instagramIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="Instagram" />
       </a>
-      <a href="tiktok.com/@gursha.rewards" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
+      <a href="https://www.gursha.app/tiktok.com/@gursharewards" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
         <img src={tiktokIcon || "/placeholder.svg"} className="h-[40px] w-[40px]" alt="TikTok" />
       </a>
     </div>
