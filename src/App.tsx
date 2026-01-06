@@ -271,7 +271,7 @@ style={{ background: '#FFFFFF', boxShadow:'none'}} // Outer bg white
         </div>
         <div className="">
           <span className="font-[700] text-base text-[17px]">
-            {i + 1}. {step.title}
+            {step.title}
           </span>
           <div className="text-sm text-gray-500 mt-1">{step.sub}</div>
         </div>

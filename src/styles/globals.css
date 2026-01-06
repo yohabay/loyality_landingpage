@@ -1,14 +1,14 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Noto Serif Ethiopic';
-  src: url('/NotoSerifEthiopic-hinted/NotoSerifEthiopic-Regular.ttf') format('truetype');
+  font-family: 'Noto Sans Ethiopic';
+  src: url('/NotoSansEthiopic/NotoSansEthiopic-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 .amharic-font {
-  font-family: 'Noto Serif Ethiopic', serif;
+  font-family: 'Noto Sans Ethiopic', sans-serif;
 }
 
 @custom-variant dark (&:is(.dark *));
