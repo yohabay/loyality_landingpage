@@ -38,7 +38,7 @@ const resources = {
   am: {
     translation: {
       "Gursha Localization": "ጉርሻ ትርጉህ: ጥር 5, 2026",
-      "Supermarket Money Saving App": "የሱፐርማርኬት ወጪ ቆጣቢ መተግበሪያ",
+      "Supermarket Money Saving App": "የሱፐርማርኬት ገንዘብ መቆጠቢያ መተግበሪያ",
       "Up to 10% Gursha points for Scanned Receipts!": "ደረሰኝ ፎቶ በማንሳት እስከ 10% የጉርሻ ነጥብ ያግኙ!",
       "How it Works?": "እንዴት ይሰራል?",
       "It's sooo easy": "በጣም ቀላል ነው!",
