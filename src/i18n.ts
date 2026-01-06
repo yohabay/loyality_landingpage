@@ -38,7 +38,7 @@ const resources = {
   am: {
     translation: {
       "Gursha Localization": "ጉርሻ ትርጉህ: ጥር 5, 2026",
-      "Supermarket Money Saving App": "የሱፐርማርኬት ገንዘብ መቆጠቢያ መተግበሪያ",
+      "Supermarket Money Saving App": "የሱፐርማርኬት ገንዘብ መቆጠቢያ አፕ",
       "Up to 10% Gursha points for Scanned Receipts!": "ደረሰኝ ፎቶ በማንሳት እስከ 10% የጉርሻ ነጥብ ያግኙ!",
       "How it Works?": "እንዴት ይሰራል?",
       "It's sooo easy": "በጣም ቀላል ነው!",
@@ -53,7 +53,7 @@ const resources = {
       "FAQ & Help Section": "ተደጋጋሚ ጥያቄዎች እና መረጃ",
       "Asked Questions": "ተደጋጋሚ ጥያቄዎች",
       "What is Gursha Rewards?": "ጉርሻ ሪዋርድስ ምንድን ነው?",
-      "Gursha Rewards is a supermarket loyalty app that lets shoppers earn Gursha points, Maximize savings with exclusive offers, and save on every spend at our partner supermarkets.": "ጉርሻ ሪዋርድስ ሸማቾች የጉርሻ ነጥቦችን እንዲሰበስቡ፣ በልዩ ስጦታ ቁጠባን እንዲያሳድጉ እና በሱፐርማርኬቶች በሚያደርጉት ወጪ እንዲቆጥቡ የሚያስችል መተግበሪያ ነው።",
+      "Gursha Rewards is a supermarket loyalty app that lets shoppers earn Gursha points, Maximize savings with exclusive offers, and save on every spend at our partner supermarkets.": "ጉርሻ ሪዋርድስ ሸማቾች የጉርሻ ነጥቦችን እንዲሰበስቡ፣ በልዩ ስጦታ ቁጠባን እንዲያሳድጉ እና በሱፐርማርኬቶች በሚያደርጉት ወጪ እንዲቆጥቡ የሚያስችል አፕ ነው።",
       "How do I earn Gursha Points?": "የጉርሻ ነጥቦችን እንዴት ማግኘት እችላለሁ?",
       "You earn gursha points by shopping at partner supermarkets and uploading your receipt in the app, (1 Gursha points = 1 ETB).": "ከአጋር ሱፐርማርኬቶች በመገበያየት እና የግዢ ደረሰኝዎን በመተግበሪያው ላይ ስካን በማድረግ የጉርሻ ነጥብ ያገኛሉ (1 የጉርሻ ነጥብ = 1 ብር)።",
       "How does Gursha Rewards works?": "ጉርሻ ሪዋርድስ እንዴት ይሰራል?",
@@ -62,7 +62,7 @@ const resources = {
       "Offers are bonus campaigns that help you earn more Gursha points through game-like progress, either by buying specific items or spending a set amount within the campaign period.": "ኦፈሮች ማለት የተወሰኑ እቃዎችን በመግዛት ወይም በተሰጠው የጊዜ ገደብ ውስጥ የተወሰነ ገንዘብ በማውጣት፣ በአዝናኝ ሂደት ተጨማሪ የጉርሻ ነጥቦችን እንዲያገኙ የሚያግዙ የሽልማት አይነቶች ናቸው።",
       "What to do with my Gursha points?": "በሰበሰብኩት የጉርሻ ነጥብ ምን ማድረግ እችላለሁ?",
       "Gursha points collected from a supermarket can be converted into a discount coupon, which will be deducted for your next purchase by giving the cashier your coupon code and pay only the remaining amounts.": "ከሱፐርማርኬት ግዢዎች የሰበሰቡትን የጉርሻ ነጥብ ወደ ቅናሽ ኩፖን መቀየር ይችላሉ። በሚቀጥለው ግዢዎ ለካሸሩ የኩፖኑን ኮዱን በመስጠት የኩፖኑን ዋጋ አስቀንሰው ቀሪውን ሂሳብ ብቻ መክፈል ይችላሉ።",
-      "Download the app to save on every purchase!": "በእያንዳንዱ ግዢዎ ለመቆጠብ መተግበሪያውን አሁኑኑ ይጫኑ!"
+      "Download the app to save on every purchase!": "በእያንዳንዱ ግዢዎ ለመቆጠብ መተግበሪያውን አሁኑኑ ይጫኑ!" 
     }
   }
 };
