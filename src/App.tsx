@@ -5,6 +5,7 @@ import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
 
+import AppImage from "./images/appimage.png"
 import applogowithtext from "./images/applogowithtext.png"
 import AppleIcon from "./images/appstorecommingsoon.png"
 import bgImage from "./images/bgimage.png"
@@ -130,7 +131,7 @@ function Home() {
 
 <div className="flex justify-center">
   <img
-    src="src/images/public/appimage.png"
+    src={AppImage}
     alt=""
     style={{ width: "181px" }}
   />
@@ -154,7 +155,7 @@ function Home() {
 >
   {t("የሱፐርማርኬት ገንዘብ መቆጠቢያ አፕሊኬሽን!")}
 </h1>
-
+   
 
   {/* Store Buttons — Image Only */}
   <div className="flex flex-row gap-3 mb-6 w-full flex-nowrap">
