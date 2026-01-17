@@ -9,7 +9,6 @@ import {
   ShoppingBag,
   Tag,
 } from "lucide-react";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -49,12 +48,11 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="flex flex-col items-center"
               >
-                <Image
+                <img
                   src="/playstorebutton.png"
                   alt="Google Play"
                   width={150}
                   height={60}
-                  layout="fixed"
                   style={{
                     width: "150px",
                     height: "60px",
@@ -65,12 +63,11 @@ export default function Home() {
               </a>
 
               <a href="#" className="flex flex-col items-center">
-                <Image
+                <img
                   src="/applebutton.png"
                   alt="App Store"
                   width={150}
                   height={60}
-                  layout="fixed"
                   style={{
                     width: "150px",
                     height: "60px",
@@ -328,12 +325,11 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="flex flex-col items-center"
               >
-                <Image
+                <img
                   src="/playstorebutton.png"
                   alt="Google Play"
                   width={150}
                   height={60}
-                  layout="fixed"
                   style={{
                     width: "150px",
                     height: "60px",
@@ -344,12 +340,11 @@ export default function Home() {
               </a>
 
               <a href="#" className="flex flex-col items-center">
-                <Image
+                <img
                   src="/applebutton.png"
                   alt="App Store"
                   width={150}
                   height={60}
-                  layout="fixed"
                   style={{
                     width: "150px",
                     height: "60px",
@@ -370,12 +365,11 @@ export default function Home() {
             {/* Logo & Description */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <Image
+                <img
                   src="/shewaberlogo.png"
                   alt="shewaber rewards logo"
                   width={120}
                   height={50}
-                  layout="fixed"
                   style={{
                     width: "100px",
                     height: "50px",
@@ -431,7 +425,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center"
                 >
-                  <Image
+                  <img
                     src="/playstorebutton.png"
                     alt="Google Play"
                     width={150}
