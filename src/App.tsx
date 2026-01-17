@@ -120,12 +120,19 @@ function Home() {
   />
 
   {/* Download Button */}
+ <a
+  href="https://play.google.com/store/apps/details?id=com.gursha_rewards"
+  target="_blank"
+  rel="noopener noreferrer"
+>
   <button
     className="flex items-center gap-2 bg-white text-orange-600 font-semibold px-4 py-2 rounded-full hover:bg-orange-50 transition"
   >
     Download app
     <span className="text-lg leading-none">→</span>
   </button>
+</a>
+
 </div> 
 
 
@@ -241,27 +248,35 @@ function Home() {
 >
   {step.sub}
 </div>
-{i === 0 && <p
-  className="mt-[23px]"
-  style={{
-    fontFamily: "Nokia Pure Headline",
-    fontWeight: 700,        // Bold
-    fontStyle: "normal",    // Bold handled by fontWeight
-    fontSize: "12px",
-    lineHeight: "100%",
-    letterSpacing: "0%",
-    verticalAlign: "middle",
-    color: "#613700",
-  }}
+{i === 0 && 
+<a
+  href="https://play.google.com/store/apps/details?id=com.gursha_rewards"
+  target="_blank"
+  rel="noopener noreferrer"
 >
-  መተግበሪያውን አሁን ያውርዱት
-  <span
-    className="text-lg leading-none"
-    style={{ verticalAlign: "middle" }}
+  <p
+    className="mt-[23px] flex items-center gap-1 cursor-pointer"
+    style={{
+      fontFamily: "Nokia Pure Headline",
+      fontWeight: 700,        // Bold
+      fontStyle: "normal",
+      fontSize: "12px",
+      lineHeight: "100%",
+      letterSpacing: "0%",
+      verticalAlign: "middle",
+      color: "#613700",
+    }}
   >
-    →
-  </span>
-</p>
+    መተግበሪያውን አሁን ያውርዱት
+    <span
+      className="text-lg leading-none"
+      style={{ display: "inline-flex", alignItems: "center" }}
+    >
+      →
+    </span>
+  </p>
+</a> 
+
 }
         </div>
       </div>
@@ -318,11 +333,11 @@ function Home() {
       <img src={product2} alt="" width={80} height={75} />
       <img src={product3} alt="" width={80} height={75} />
       <img src={product4} alt="" width={80} height={75} />
-    </div>
+    </div> 
 
     <div className="flex gap-3 mt-[17px] mb-[25px] gap-[25px] ml-[25px]">
      <div
-       className="flex items-center gap-1 px-2 py-1 rounded-full"
+       className="flex items-center gap-1 w-[61px] h-[25px] px-[2px] rounded-full"
   style={{
     background: "#61370026",
   }}
@@ -353,7 +368,7 @@ function Home() {
      </div>
 
       <div
-       className="flex items-center gap-1 px-2 py-2 rounded-full"
+       className="flex items-center gap-1 w-[61px] h-[25px] px-[2px] rounded-full"
   style={{
     background: "#61370026",
   }}
@@ -384,7 +399,7 @@ function Home() {
      </div>
 
       <div
-       className="flex items-center gap-1 px-2 py-1 rounded-full"
+       className="flex items-center gap-1 w-[61px] h-[25px] px-[2px] rounded-full"
   style={{
     background: "#61370026",
   }}
