@@ -318,15 +318,15 @@ function Home() {
     </h1>
 
     <div className="flex gap-[10px]">
-      <img src={product1} alt="" width={85} height={70} />
-      <img src={product2} alt="" width={85} height={70} />
-      <img src={product3} alt="" width={85} height={70} />
-      <img src={product4} alt="" width={85} height={70} />
-    </div> 
+      <img src={product1} alt="" className="w-[90px] h-[90px] object-contain" />
+      <img src={product2} alt="" className="w-[90px] h-[90px] object-contain" />
+      <img src={product3} alt="" className="w-[90px] h-[90px] object-contain" />
+      <img src={product4} alt="" className="w-[90px] h-[90px] object-contain" />
+    </div>
 
     <div className="flex gap-3 mt-[17px] mb-[25px] gap-[25px]">
      <div
-       className="flex items-center gap-1 w-[61px] h-[25px] px-[7px] rounded-full"
+       className="flex items-center gap-1 w-[61px] h-[25px] px-[10px] rounded-full"
   style={{
     background: "#61370026",
   }}
@@ -471,7 +471,7 @@ function Home() {
   <div className="absolute" style={{ top: "-23.5%", left: "50%", transform: "translateX(-50%)" }}>
   <img
     src={applogo || "/placeholder.svg"}
-    className="h-[300px] w-[261px]"
+    className="h-[300px] w-[261px] object-contain"
     alt="App Logo"
   />
 </div>
