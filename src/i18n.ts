@@ -17,7 +17,7 @@ const resources = {
       "2. Earn Gursha points": "2. የጉርሻ ነጥቦችን ይሰብስቡ",
       "Collect Gursha points and save on every supermarket purchases (1 Gursha point = 1 ETB)": "ለሚያደርጉት ለእያንዳንዱ ግዢ የሚያገኙትን የጉርሻ ነጥቦች በሂሳብዎ ውስጥ ያከማቹ",
       "Shop from bonus offers to earn additional Gursha points": "ተጨማሪ የጉርሻ ነጥቦችን ለማግኘት ከተመረጡ እቃዎች ይገበያዩ",
-      "3. Discounts from points": "3. ነጥቦችን ወደ ቅናሽ ይቀይ",
+      "3. Discounts from points": "3. ነጥቦችን ወደ ቅናሽ ይቀይሩ",
       "Convert your Gursha points into supermarket Discount Coupons": "የሰበሰቧቸውን ነጥቦች ወደ ገንዘብ ቅናሽ በመቀየር ለቀጣይ ግዢ ክፍያዎ ይጠቀሙ።",
       "FAQ & Help Section": "ተደጋጋሚ ጥያቄዎች እና መረጃ",
       "Asked Questions": "ተደጋጋሚ ጥያቄዎች",

@@ -1,14 +1,28 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Noto Sans Ethiopic';
-  src: url('/NotoSansEthiopic/NotoSansEthiopic-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Nokia Pure Headline';
+  src: url('/NokiaPureHeadline-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nokia Pure Headline';
+  src: url('/Nokia_Pureheadline_Light_55fdcc36e6.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SurGraphics Black';
+  src: url('/SurGraphics_Black.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
 }
 
 .amharic-font {
-  font-family: 'Noto Sans Ethiopic', sans-serif;
+  font-family: 'Nokia Pure Headline', sans-serif;
 }
 
 @custom-variant dark (&:is(.dark *));
