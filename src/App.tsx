@@ -464,7 +464,7 @@ function Home() {
     style={{
       backgroundImage: `url(${bottomBgimage})`,
       backgroundSize: "cover",
-      backgroundPosition: "center", 
+      backgroundPosition: "top",
     }}
   />
   {/* Logo on top overlapping */}
