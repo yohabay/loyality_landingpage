@@ -19,7 +19,7 @@ export default function Home() {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll); 
   }, []);
 
   return (
@@ -447,13 +447,32 @@ export default function Home() {
               <div className="flex items-center space-x-6 mt-4 md:mt-0">
                 <a
                   href="/privacypolicy"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  style={{
+                    fontFamily: "Poppins",
+                    fontWeight: 400,
+                    fontStyle: "normal",
+                    fontSize: "12px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    verticalAlign: "middle",
+                    textDecoration: "underline",
+                  }}
                 >
                   Privacy
                 </a>
                 <a
                   href="/termandconditions"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  style={{
+                    fontFamily: "Poppins",
+                    fontWeight: 600,
+                    fontStyle: "normal",
+                    fontSize: "12px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    verticalAlign: "middle",
+                  }}
                 >
                   Terms
                 </a>
