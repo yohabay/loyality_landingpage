@@ -463,8 +463,8 @@ function Home() {
     className="absolute inset-0 z-0"
     style={{
       backgroundImage: `url(${bottomBgimage})`,
-      backgroundSize: "cover",
-      backgroundPosition: "top",
+      backgroundSize: "contain",
+      backgroundPosition: "center",
     }}
   />
   {/* Logo on top overlapping */}
