@@ -18,6 +18,7 @@ import product1 from "./images/product1.png"
 import product2 from "./images/product2.png"
 import product3 from "./images/product3.png"
 import product4 from "./images/product4.png"
+import receiptIcon from "./images/receiptIcon.svg"
 import cartImage from "./images/supermarketcart.svg"
 
 import homeBgimage from "./images/homebgImage.png"
@@ -69,7 +70,7 @@ function Home() {
   ]
 
   return (
-    <div className="min-h-screen amharic-font bg-[#fff] w-full">
+    <div className="min-h-screen amharic-font bg-[#FFF5EE] w-full ">
       {/* Background container for header and steps until scan icon */}
       <div className="w-full relative overflow-hidden" style={{ backgroundImage: `url(${homeBgimage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       {/* Top header gradient */}
@@ -143,7 +144,7 @@ function Home() {
    
 
   {/* Store Buttons — Image Only */}
-  <div className="flex flex-row gap-3 mb-6 w-full flex-nowrap">
+  <div className="flex flex-row gap-3 w-full flex-nowrap mb-[10px]">
 
    <div className="flex-1 min-w-0">
   <a
@@ -175,15 +176,13 @@ function Home() {
 
 
 </header>
-      </div> {/* End background container */}
+      </div> 
 
-      {/* How it Works Steps */}
-    <section className="mx-auto max-w-full px-6 md:px-12 lg:px-16 mt-6 md:mt-8">
-  <div className="w-full h-[50px] mb-4" style={{ backgroundImage: `url(${homeBgimage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+    <section className="mx-auto max-w-full px-6 md:px-12 lg:px-16 ">
   <div className="flex flex-col gap-6 mb-8">
     {[
       {
-        icon: <img src={homeBgimage} className="h-[50px] w-[50px]" alt="Scan" />,
+        icon: <img src={receiptIcon} className="h-[50px] w-[50px]" alt="Scan" />,
         title: t("1. Scan your receipt"),
         sub: t("Simply upload your purchase receipts into the App"),
       },
@@ -274,7 +273,7 @@ function Home() {
   </div>
 </section>
     {/* Outer wrapper for gradient border */}
-<div className="relative mx-[10px] rounded-[35px] overflow-hidden p-[25px]">
+<div className="relative mx-[10px] rounded-[35px] overflow-hidden p-[25px] ">
   {/* Gradient border */}
   <div className="absolute inset-0 z-0 rounded-[35px]">
     <div className="w-full h-full rounded-[35px] bg-gradient-to-b from-[#FF9800] to-[#FF6600]" />
@@ -308,7 +307,7 @@ function Home() {
       style={{
      fontFamily: "SurGraphics Black",
         fontWeight: 900,
-        fontSize: "30px",
+        fontSize: "30px", 
         lineHeight: "110%",
         letterSpacing: "0%",
         whiteSpace: "pre-wrap",
@@ -319,15 +318,15 @@ function Home() {
     </h1>
 
     <div className="flex gap-[10px]">
-      <img src={product1} alt="" width={80} height={70} />
-      <img src={product2} alt="" width={80} height={70} />
-      <img src={product3} alt="" width={80} height={70} />
-      <img src={product4} alt="" width={80} height={70} />
+      <img src={product1} alt="" width={85} height={70} />
+      <img src={product2} alt="" width={85} height={70} />
+      <img src={product3} alt="" width={85} height={70} />
+      <img src={product4} alt="" width={85} height={70} />
     </div> 
 
     <div className="flex gap-3 mt-[17px] mb-[25px] gap-[25px]">
      <div
-       className="flex items-center gap-1 w-[61px] h-[25px] px-[2px] rounded-full"
+       className="flex items-center gap-1 w-[61px] h-[25px] px-[7px] rounded-full"
   style={{
     background: "#61370026",
   }}
