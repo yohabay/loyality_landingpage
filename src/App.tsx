@@ -316,135 +316,125 @@ function Home() {
     >
       {t("በተመረጡ እቃዎች ላይ ተጨማሪ ጉርሻ ያግኙ")}
     </h1>
+{/* Products row */}
+<div className="flex gap-[10px] justify-center">
+  {/* Product 1 */}
+  <div className="flex flex-col items-center gap-[8px]">
+    <img
+      src={product1}
+      alt=""
+      className="w-[110px] h-[110px] object-contain"
+    />
 
-    <div className="flex gap-[10px]">
-      <img src={product1} alt="" className="w-[90px] h-[90px] object-contain" />
-      <img src={product2} alt="" className="w-[90px] h-[90px] object-contain" />
-      <img src={product3} alt="" className="w-[90px] h-[90px] object-contain" />
-      <img src={product4} alt="" className="w-[90px] h-[90px] object-contain" />
+    <div
+      className="flex items-center gap-1 px-[10px] h-[25px] rounded-full"
+      style={{ background: "#61370026" }}
+    >
+      <p
+        className="text-[18px]"
+        style={{
+          fontWeight: 900,
+          lineHeight: "15px",
+          color: "#613700",
+        }}
+      >
+        +50
+      </p>
+
+      <div className="w-5 h-5 rounded-full overflow-hidden">
+        <img src={birr} alt="" className="w-full h-full object-cover" />
+      </div>
     </div>
-
-    <div className="flex gap-3 mt-[17px] mb-[25px] gap-[25px]">
-     <div
-       className="flex items-center gap-1 w-[61px] h-[25px] px-[10px] rounded-full"
-  style={{
-    background: "#61370026",
-  }}
-     >
-   <p
-  className="text-[15px]"
-  style={{
-    fontWeight: 900,
-    fontStyle: "normal", // ExtraBold is controlled by fontWeight
-    lineHeight: "15px",
-    letterSpacing: "0%",
-    textAlign: "right",
-    verticalAlign: "middle",
-    color: "#613700",
-  }}
->
-  +50
-</p>
-
-      <div className="w-4 h-4 rounded-full overflow-hidden">
-    <img
-      src={birr}
-      alt=""
-      className="w-full h-full object-cover"
-    />
   </div>
-     </div>
 
-      <div
-       className="flex items-center gap-1 w-[61px] h-[25px] px-[2px] rounded-full"
-  style={{
-    background: "#61370026",
-  }}
-     >
-   <p
-  className="text-[15px]"
-  style={{
-    fontWeight: 900,
-    fontStyle: "normal", // ExtraBold is controlled by fontWeight
-    lineHeight: "15px",
-    letterSpacing: "0%",
-    textAlign: "right",
-    verticalAlign: "middle",
-    color: "#613700",
-  }}
->
-  +25
-</p>
-
-      <div className="w-4 h-4 rounded-full overflow-hidden">
+  {/* Product 2 */}
+  <div className="flex flex-col items-center gap-[8px]">
     <img
-      src={birr}
+      src={product2}
       alt=""
-      className="w-full h-full object-cover"
+      className="w-[110px] h-[110px] object-contain"
     />
-  </div>
-     </div>
 
-      <div
-       className="flex items-center gap-1 w-[61px] h-[25px] px-[2px] rounded-full"
-  style={{
-    background: "#61370026",
-  }}
-     >
-   <p
-  className="text-[15px]"
-  style={{
-    fontWeight: 900,
-    fontStyle: "normal", // ExtraBold is controlled by fontWeight
-    lineHeight: "15px",
-    letterSpacing: "0%",
-    textAlign: "right",
-    verticalAlign: "middle",
-    color: "#613700",
-  }}
->
-  +100
-</p>
+    <div
+      className="flex items-center gap-1 px-[10px] h-[25px] rounded-full"
+      style={{ background: "#61370026" }}
+    >
+      <p
+        className="text-[18px]"
+        style={{
+          fontWeight: 900,
+          lineHeight: "15px",
+          color: "#613700",
+        }}
+      >
+        +25
+      </p>
 
-      <div className="w-4 h-4 rounded-full overflow-hidden">
-    <img
-      src={birr}
-      alt=""
-      className="w-full h-full object-cover"
-    />
-  </div>
-     </div>
-
-      <div
-       className="flex items-center gap-1 px-2 py-1 rounded-full"
-  style={{
-    background: "#61370026",
-  }}
-     >
-   <p
-  className="text-[15px]"
-  style={{
-    fontWeight: 900,
-    fontStyle: "normal", // ExtraBold is controlled by fontWeight
-    lineHeight: "15px",
-    letterSpacing: "0%",
-    textAlign: "right",
-    verticalAlign: "middle",
-    color: "#613700",
-  }}
->
-  +200
-</p>
-
-      <div className="w-4 h-4 rounded-full overflow-hidden">
-    <img
-      src={birr}
-      alt=""
-      className="w-full h-full object-cover"
-    />
-  </div>
-     </div>
+      <div className="w-5 h-5 rounded-full overflow-hidden">
+        <img src={birr} alt="" className="w-full h-full object-cover" />
+      </div>
     </div>
+  </div>
+
+  {/* Product 3 */}
+  <div className="flex flex-col items-center gap-[8px]">
+    <img
+      src={product3}
+      alt=""
+      className="w-[110px] h-[110px] object-contain"
+    />
+
+    <div
+      className="flex items-center gap-1 px-[10px] h-[25px] rounded-full"
+      style={{ background: "#61370026" }}
+    >
+      <p
+        className="text-[18px]"
+        style={{
+          fontWeight: 900,
+          lineHeight: "15px",
+          color: "#613700",
+        }}
+      >
+        +100
+      </p>
+
+      <div className="w-5 h-5 rounded-full overflow-hidden">
+        <img src={birr} alt="" className="w-full h-full object-cover" />
+      </div>
+    </div>
+  </div>
+
+  {/* Product 4 */}
+  <div className="flex flex-col items-center gap-[8px]">
+    <img
+      src={product4}
+      alt=""
+      className="w-[110px] h-[110px] object-contain"
+    />
+
+    <div
+      className="flex items-center gap-1 px-[10px] h-[25px] rounded-full"
+      style={{ background: "#61370026" }}
+    >
+      <p
+        className="text-[18px]"
+        style={{
+          fontWeight: 900,
+          lineHeight: "15px",
+          color: "#613700",
+        }}
+      >
+        +200
+      </p>
+
+      <div className="w-5 h-5 rounded-full overflow-hidden">
+        <img src={birr} alt="" className="w-full h-full object-cover" />
+      </div>
+    </div>
+  </div>
+</div>
+
   </div> 
 </div>
 
@@ -541,7 +531,7 @@ function Home() {
   </div>
 </div>
 
-<h2 className="text-[12px] text-white mb-[20px] mt-[30px]">
+<h2 className="text-[12px] text-white mb-[20px] mt-[30px] font-bold">
  Copyright &copy; Gursha Rewards 2026
 </h2>
 
