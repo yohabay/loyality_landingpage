@@ -349,7 +349,7 @@ function Home() {
           +{[50, 25, 100, 200][i]}
         </p>
 
-        <div className="w-5 h-5 rounded-full overflow-hidden">
+        <div className="w-4 h-4 rounded-full overflow-hidden">
           <img src={birr} alt="" className="w-full h-full object-cover" />
         </div>
       </div>
