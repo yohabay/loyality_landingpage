@@ -333,11 +333,11 @@ function Home() {
       <div
         className="flex items-center gap-1 px-[10px] h-[25px] rounded-full"
         style={{ background: "#61370026" }}
-      >
+      > 
         <p
-          className="text-[18px]"
+          className="text-[18px] font-bold"
           style={{
-            fontWeight: 900,
+            fontFamily: "SurGraphics Black",
             lineHeight: "15px",
             color: "#613700",
           }}
