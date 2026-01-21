@@ -335,10 +335,14 @@ function Home() {
         style={{ background: "#61370026" }}
       > 
         <p
-          className="text-[18px] font-bold"
+          className="text-[15px] font-extrabold text-right"
           style={{
-            fontFamily: "SurGraphics Black",
+            fontFamily: "Poppins",
+            fontWeight: 800,
+            fontStyle: "normal",
             lineHeight: "15px",
+            letterSpacing: "0%",
+            verticalAlign: "middle",
             color: "#613700",
           }}
         >
