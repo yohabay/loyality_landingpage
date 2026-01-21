@@ -317,123 +317,42 @@ function Home() {
       {t("በተመረጡ እቃዎች ላይ ተጨማሪ ጉርሻ ያግኙ")}
     </h1>
 {/* Products row */}
-<div className="flex gap-[10px] justify-center">
-  {/* Product 1 */}
-  <div className="flex flex-col items-center gap-[8px]">
-    <img
-      src={product1}
-      alt=""
-      className="w-[110px] h-[110px] object-contain"
-    />
+<div className="flex gap-[10px] justify-start">
+  {[product1, product2, product3, product4].map((product, i) => (
+    <div key={i} className="flex flex-col items-center gap-[8px]">
+      {/* Image container */}
+      <div className="w-[85px] h-[85px] flex items-center justify-center">
+        <img
+          src={product}
+          alt=""
+          className="max-w-full max-h-full object-contain"
+        />
+      </div>
 
-    <div
-      className="flex items-center gap-1 px-[10px] h-[25px] rounded-full"
-      style={{ background: "#61370026" }}
-    >
-      <p
-        className="text-[18px]"
-        style={{
-          fontWeight: 900,
-          lineHeight: "15px",
-          color: "#613700",
-        }}
+      {/* Badge */}
+      <div
+        className="flex items-center gap-1 px-[10px] h-[25px] rounded-full"
+        style={{ background: "#61370026" }}
       >
-        +50
-      </p>
+        <p
+          className="text-[18px]"
+          style={{
+            fontWeight: 900,
+            lineHeight: "15px",
+            color: "#613700",
+          }}
+        >
+          +{[50, 25, 100, 200][i]}
+        </p>
 
-      <div className="w-5 h-5 rounded-full overflow-hidden">
-        <img src={birr} alt="" className="w-full h-full object-cover" />
+        <div className="w-5 h-5 rounded-full overflow-hidden">
+          <img src={birr} alt="" className="w-full h-full object-cover" />
+        </div>
       </div>
     </div>
-  </div>
-
-  {/* Product 2 */}
-  <div className="flex flex-col items-center gap-[8px]">
-    <img
-      src={product2}
-      alt=""
-      className="w-[110px] h-[110px] object-contain"
-    />
-
-    <div
-      className="flex items-center gap-1 px-[10px] h-[25px] rounded-full"
-      style={{ background: "#61370026" }}
-    >
-      <p
-        className="text-[18px]"
-        style={{
-          fontWeight: 900,
-          lineHeight: "15px",
-          color: "#613700",
-        }}
-      >
-        +25
-      </p>
-
-      <div className="w-5 h-5 rounded-full overflow-hidden">
-        <img src={birr} alt="" className="w-full h-full object-cover" />
-      </div>
-    </div>
-  </div>
-
-  {/* Product 3 */}
-  <div className="flex flex-col items-center gap-[8px]">
-    <img
-      src={product3}
-      alt=""
-      className="w-[110px] h-[110px] object-contain"
-    />
-
-    <div
-      className="flex items-center gap-1 px-[10px] h-[25px] rounded-full"
-      style={{ background: "#61370026" }}
-    >
-      <p
-        className="text-[18px]"
-        style={{
-          fontWeight: 900,
-          lineHeight: "15px",
-          color: "#613700",
-        }}
-      >
-        +100
-      </p>
-
-      <div className="w-5 h-5 rounded-full overflow-hidden">
-        <img src={birr} alt="" className="w-full h-full object-cover" />
-      </div>
-    </div>
-  </div>
-
-  {/* Product 4 */}
-  <div className="flex flex-col items-center gap-[8px]">
-    <img
-      src={product4}
-      alt=""
-      className="w-[110px] h-[110px] object-contain"
-    />
-
-    <div
-      className="flex items-center gap-1 px-[10px] h-[25px] rounded-full"
-      style={{ background: "#61370026" }}
-    >
-      <p
-        className="text-[18px]"
-        style={{
-          fontWeight: 900,
-          lineHeight: "15px",
-          color: "#613700",
-        }}
-      >
-        +200
-      </p>
-
-      <div className="w-5 h-5 rounded-full overflow-hidden">
-        <img src={birr} alt="" className="w-full h-full object-cover" />
-      </div>
-    </div>
-  </div>
+  ))}
 </div>
+
 
   </div> 
 </div>
