@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
 
 import AppImage from "./images/appimage.png"
+import AppleIcon from "./images/applebutton.png"
 import applogowithtext from "./images/applogowithtext.png"
-import AppleIcon from "./images/appstorecommingsoon.png"
 import bgImage from "./images/bgimage.png"
 import birr from "./images/birr.png"
 import bottomBgimage from "./images/bottomBgimage.png"
@@ -146,6 +146,21 @@ function Home() {
   {/* Store Buttons — Image Only */}
   <div className="flex flex-row gap-3 w-full flex-nowrap mb-[10px]">
 
+      <div className="flex-1 min-w-0">
+      <a
+        href="https://apps.apple.com/us/app/gursha-rewards/id6757143916"
+        target="_blank"
+        rel="noopener noreferrer"
+        className=""
+      >
+         <img
+        src={AppleIcon}
+        alt="Apple Store Button"
+      className="h-[46px] w-[155px]"
+      />
+      </a>
+    </div>
+
    <div className="flex-1 min-w-0">
   <a
     href="https://play.google.com/store/apps/details?id=com.gursha_rewards"
@@ -157,21 +172,11 @@ function Home() {
       src={googleplayIcon}
       alt="Google Play Button"
       className="h-[46px] w-[155px]"
-    /> 
+    />
   </a>
 </div>
 
-      <div className="flex-1 min-w-0">
-      <button className="">
-         <img
-        src={AppleIcon}
-        alt="Apple Store Button"
-      className="h-[46px] w-[155px]"
-      />
-      </button>
-    </div>
- 
-  </div> 
+  </div>
 </div>
 
 
@@ -433,6 +438,18 @@ function Home() {
 
   <div className="flex gap-3 mt-[39px] mb-[25px]">
     <a
+      href="https://apps.apple.com/us/app/gursha-rewards/id6757143916"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src={AppleIcon}
+        alt="Apple Store Button"
+        className="h-[46px] w-[155px]"
+      />
+    </a>
+
+    <a
       href="https://play.google.com/store/apps/details?id=com.gursha_rewards"
       target="_blank"
       rel="noopener noreferrer"
@@ -443,14 +460,6 @@ function Home() {
         className="h-[46px] w-[155px]"
       />
     </a>
-
-    <button>
-      <img
-        src={AppleIcon}
-        alt="Apple Store Button"
-        className="h-[46px] w-[155px]"
-      />
-    </button>
   </div>
 </div>
 
